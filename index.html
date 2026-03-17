@@ -1,1 +1,1733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andalusia Family Holiday — April 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#CC3D00;--mid:#F06800;--accent:#E86000;
+  --pale:#FFF3E6;--stripe:#FFFAF5;--cream:#FDF8F2;
+  --white:#FFFFFF;--ink:#1A0800;--muted:#7A5C40;
+  --divider:#E8D8C8;--shadow:rgba(26,8,0,0.10);
+  --green:#2E7D32;--green-bg:#E8F5E9;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;font-size:15px}
 
+/* HERO */
+.hero{position:relative;min-height:340px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:72px 24px 56px;
+  text-align:center;overflow:hidden;background:#1A0800}
+.hero-slides{position:absolute;inset:0;z-index:0}
+.slide{position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:0;transition:opacity 1.4s ease-in-out}
+.slide.active{opacity:1}
+.hero-overlay{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(160deg,rgba(15,3,0,0.65) 0%,rgba(80,18,0,0.50) 55%,rgba(15,3,0,0.58) 100%)}
+.hero-content{position:relative;z-index:2}
+.hero-eye{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;
+  color:rgba(255,200,120,0.9);margin-bottom:14px;animation:fadeUp .7s .1s both}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(42px,7vw,78px);
+  font-weight:900;color:#fff;line-height:1.05;text-shadow:0 2px 16px rgba(0,0,0,.5);
+  animation:fadeUp .7s .25s both}
+.hero-sub{font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(17px,2.5vw,24px);color:rgba(255,255,255,.78);margin-top:10px;
+  text-shadow:0 1px 8px rgba(0,0,0,.45);animation:fadeUp .7s .4s both}
+.pills{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;
+  margin-top:26px;animation:fadeUp .7s .55s both}
+.pill{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);
+  color:rgba(255,255,255,.92);font-size:12px;font-weight:500;padding:5px 13px;border-radius:100px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* NAV */
+.sticky-nav{position:sticky;top:0;z-index:100;background:#1A0800;
+  border-bottom:2px solid var(--deep);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.nav-inner{display:flex;max-width:1200px;margin:0 auto;padding:0 12px}
+.nav-tab{flex-shrink:0;padding:13px 16px;font-size:12px;font-weight:600;
+  letter-spacing:.8px;text-transform:uppercase;color:rgba(255,255,255,.5);
+  cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;
+  white-space:nowrap;text-decoration:none;display:block}
+.nav-tab:hover{color:rgba(255,255,255,.9)}
+.nav-tab.active{color:#FFB366;border-bottom-color:#FFB366}
+
+/* CONTENT */
+.content{max-width:1140px;margin:0 auto;padding:36px 18px 80px}
+.section{display:none}.section.active{display:block}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);
+  font-weight:900;color:var(--ink);line-height:1.15;margin-bottom:6px}
+.sec-bar{width:44px;height:3px;background:var(--deep);margin:10px 0;border-radius:2px}
+.sec-sub{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;
+  color:var(--muted);margin-bottom:32px}
+.sec-header{margin-bottom:28px}
+
+/* CITY BANNER */
+.city-banner{background:linear-gradient(135deg,var(--deep),var(--accent));
+  border-radius:10px;padding:14px 22px;margin:0 0 16px;display:flex;align-items:center;gap:10px}
+.city-banner-text{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff}
+
+/* SUBHEAD */
+.subhead{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;
+  color:var(--deep);margin:24px 0 12px;display:flex;align-items:center;gap:12px}
+.subhead::after{content:'';flex:1;height:1px;background:var(--divider)}
+
+/* PHOTO STRIP */
+.photo-strip{display:grid;gap:5px;margin:0 0 18px;border-radius:10px;overflow:hidden}
+.photo-strip.n1{grid-template-columns:1fr}
+.photo-strip.n2{grid-template-columns:1fr 1fr}
+.photo-strip.n3{grid-template-columns:1fr 1fr 1fr}
+.photo-strip.n4{grid-template-columns:1fr 1fr;grid-template-rows:auto auto}
+.ps-cell img{width:100%;height:200px;object-fit:cover;object-position:center;display:block}
+.photo-strip.n1 .ps-cell img{height:280px}
+.photo-strip.n2 .ps-cell img{height:220px}
+@media(max-width:600px){
+  .ps-cell img{height:130px}
+  .photo-strip.n1 .ps-cell img{height:200px}
+  .photo-strip.n2 .ps-cell img{height:160px}
+  .photo-strip.n3{grid-template-columns:1fr 1fr}
+}
+
+/* LINKS */
+.mlink{display:inline-flex;align-items:center;gap:3px;font-size:12px;font-weight:600;
+  color:var(--mid);text-decoration:none;background:var(--pale);
+  border:1px solid #f0c090;padding:3px 10px;border-radius:100px;
+  margin-top:5px;margin-right:4px;transition:background .15s}
+.mlink:hover{background:#ffe0c0}
+.wlink{display:inline-flex;align-items:center;gap:3px;font-size:12px;font-weight:600;
+  color:#0055BB;text-decoration:none;background:#EBF5FF;
+  border:1px solid #99CCFF;padding:3px 10px;border-radius:100px;
+  margin-top:5px;margin-right:4px;transition:background .15s}
+.wlink:hover{background:#d0e8ff}
+.wallet-link{color:#5B2D8E;background:#F0E8FF;border-color:#C4A8E8}
+.wallet-link:hover{background:#e0d0ff}
+
+/* ALERTS */
+.alert{display:flex;gap:10px;align-items:flex-start;border-radius:9px;
+  padding:13px 16px;margin:14px 0;font-size:14px}
+.alert-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.alert-warn{background:#FFF3E6;border:1px solid #F0A060;border-left:4px solid var(--deep)}
+.alert-info{background:#EBF5FF;border:1px solid #90C0E8;border-left:4px solid #1976D2}
+.alert-green{background:var(--green-bg);border:1px solid #A5D6A7;border-left:4px solid var(--green)}
+.alert strong{color:var(--deep)}
+
+/* GLANCE GRID */
+.glance-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:24px 0}
+.gc{background:var(--white);border:1px solid var(--divider);border-radius:12px;
+  padding:18px;position:relative;overflow:hidden;transition:box-shadow .2s,transform .2s}
+.gc:hover{box-shadow:0 6px 20px var(--shadow);transform:translateY(-2px)}
+.gc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--deep);border-radius:12px 12px 0 0}
+.gc.hl{border-color:var(--deep);border-width:2px}
+.gc-icon{font-size:20px;margin-bottom:6px}
+.gc-label{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.gc-value{font-size:15px;font-weight:600;color:var(--ink);line-height:1.35}
+.gc-sub{font-size:12px;color:var(--muted);margin-top:2px}
+.gc-links{margin-top:8px}
+
+/* ROUTE MAP */
+.route-map{background:var(--white);border:1px solid var(--divider);border-radius:12px;
+  overflow:hidden;box-shadow:0 3px 14px var(--shadow);margin:0 0 28px}
+
+/* PIN GRID */
+.map-sect{margin:0 0 28px}
+.map-label{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.map-label::before,.map-label::after{content:'';flex:1;height:1px;background:var(--divider)}
+.pin-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.pin-card{display:flex;gap:10px;align-items:flex-start;background:var(--white);
+  border:1px solid var(--divider);border-radius:10px;padding:11px 13px;transition:box-shadow .15s}
+.pin-card:hover{box-shadow:0 3px 10px var(--shadow)}
+.pin-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.pin-body{flex:1;min-width:0}
+.pin-name{font-weight:700;font-size:13px;color:var(--ink);margin-bottom:2px}
+.pin-desc{font-size:12px;color:var(--muted);margin-bottom:3px;line-height:1.4}
+
+/* ACCOMMODATION */
+.accom-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin:20px 0}
+.acard{background:var(--white);border:1px solid var(--divider);border-radius:12px;overflow:hidden;transition:box-shadow .2s}
+.acard:hover{box-shadow:0 6px 20px var(--shadow)}
+.acard-head{background:linear-gradient(135deg,var(--deep),var(--accent));padding:18px}
+.acard-nights{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:3px}
+.acard-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#fff}
+.acard-city{font-size:12px;color:rgba(255,255,255,.7);margin-top:2px}
+.acard-body{padding:16px}
+.acard-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--divider);font-size:13px}
+.acard-row:last-child{border-bottom:none}
+.acard-k{color:var(--muted);font-weight:500}
+.acard-v{font-weight:600;color:var(--ink);text-align:right;max-width:60%;line-height:1.4}
+
+/* TIMELINE */
+.day-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.day-btn{padding:7px 15px;border-radius:100px;border:1.5px solid var(--divider);
+  background:var(--white);color:var(--muted);font-size:12px;font-weight:600;
+  cursor:pointer;transition:all .2s;white-space:nowrap}
+.day-btn:hover{border-color:var(--deep);color:var(--deep)}
+.day-btn.active{background:var(--deep);border-color:var(--deep);color:#fff}
+.day-panel{display:none}.day-panel.active{display:block}
+.day-hdr{background:linear-gradient(135deg,#3D0A00,#7B2000);border-radius:10px 10px 0 0;
+  padding:18px 22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.day-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff}
+.day-sub{font-size:12px;color:rgba(255,255,255,.6);margin-top:2px}
+.day-badge{background:var(--deep);color:#fff;font-size:11px;font-weight:600;
+  letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:100px}
+.timeline{background:var(--white);border:1px solid var(--divider);border-top:none;
+  border-radius:0 0 10px 10px;overflow:hidden}
+.tl-row{display:grid;grid-template-columns:120px 1fr;border-bottom:1px solid var(--divider)}
+.tl-row.even{background:var(--stripe)}
+.tl-row:last-child{border-bottom:none}
+.tl-time{padding:13px 14px;font-size:12px;font-weight:600;color:var(--deep);
+  background:#FFF6EE;border-right:1px solid var(--divider);display:flex;align-items:flex-start}
+.tl-row.even .tl-time{background:#FFF9F4}
+.tl-detail{padding:13px 16px;font-size:14px;line-height:1.55}
+.tl-detail strong{font-weight:600;color:var(--ink)}
+.tl-note{font-size:12px;color:var(--muted);margin-top:2px}
+@media(max-width:600px){.tl-row{grid-template-columns:80px 1fr}}
+
+/* TRAINS TABLE */
+.tbl-wrap{overflow-x:auto;border-radius:10px;margin:16px 0;border:1px solid var(--divider)}
+.dtbl{width:100%;border-collapse:collapse;font-size:14px}
+.dtbl thead th{background:var(--deep);color:#fff;padding:11px 14px;text-align:left;
+  font-size:11px;font-weight:600;letter-spacing:.7px;text-transform:uppercase}
+.dtbl tbody tr:nth-child(even){background:var(--stripe)}
+.dtbl tbody tr:nth-child(odd){background:var(--white)}
+.dtbl tbody td{padding:11px 14px;border-bottom:1px solid var(--divider);vertical-align:middle}
+.dtbl tbody tr:last-child td{border-bottom:none}
+.trn-no{font-weight:700;color:var(--deep)}
+.trn-time{font-weight:700;color:var(--ink)}
+
+/* BOOKING CARDS */
+.book-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:16px 0}
+.bcard{background:var(--white);border:1px solid var(--divider);border-radius:10px;padding:18px;transition:box-shadow .2s}
+.bcard:hover{box-shadow:0 4px 16px var(--shadow)}
+.bcard.hl{border-color:var(--deep);border-width:2px}
+.bcard-type{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--deep);margin-bottom:5px}
+.bcard-name{font-weight:700;font-size:16px;color:var(--ink);margin-bottom:4px}
+.bcard-ref{font-size:12px;font-weight:600;background:var(--pale);color:var(--deep);
+  padding:3px 8px;border-radius:4px;display:inline-block;margin:4px 0 8px;font-family:monospace;letter-spacing:1px}
+.bcard-det{font-size:13px;color:var(--muted);line-height:1.6}
+.bcard-warn{margin-top:8px;font-size:12px;font-weight:600;color:var(--deep);background:#FFF3E6;padding:5px 10px;border-radius:6px}
+
+/* FOOD */
+.city-toggle{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
+.city-btn{padding:8px 18px;border-radius:100px;border:1.5px solid var(--divider);
+  background:var(--white);color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s}
+.city-btn:hover{border-color:var(--deep);color:var(--deep)}
+.city-btn.active{background:var(--deep);border-color:var(--deep);color:#fff}
+.city-food{display:none}.city-food.active{display:block}
+.rlist{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.rcard{background:var(--white);border:1px solid var(--divider);border-radius:10px;padding:15px 17px;transition:box-shadow .2s}
+.rcard:hover{box-shadow:0 3px 12px var(--shadow);border-color:#d8c0a0}
+.rcard-name{font-weight:700;font-size:15px;color:var(--ink);margin-bottom:2px}
+.rcard-addr{font-size:12px;color:var(--muted);margin-bottom:4px}
+.rcard-meta{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0}
+.tag{font-size:11px;padding:2px 8px;border-radius:100px;font-weight:600}
+.tag-rat{background:#FFF8EC;color:#B8760A;border:1px solid #f0d896}
+.tag-hrs{background:var(--cream);color:var(--muted);border:1px solid var(--divider)}
+.tag-free{background:var(--green-bg);color:var(--green);border:1px solid #A5D6A7}
+.tag-walk{background:var(--pale);color:var(--accent);border:1px solid #f0c090}
+.rcard-desc{font-size:13px;color:var(--muted);line-height:1.5;margin-top:4px}
+.rcard-links{margin-top:8px}
+
+/* TIPS */
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:18px 0}
+.tcard{background:var(--white);border:1px solid var(--divider);border-radius:10px;padding:16px}
+.tcard-icon{font-size:22px;margin-bottom:6px}
+.tcard-title{font-weight:700;font-size:14px;color:var(--ink);margin-bottom:4px}
+.tcard-text{font-size:13px;color:var(--muted);line-height:1.5}
+
+.place-city{display:none}.place-city.active{display:block}
+.place-btn{padding:8px 18px;border-radius:100px;border:1.5px solid var(--divider);
+  background:var(--white);color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s}
+.place-btn:hover{border-color:var(--deep);color:var(--deep)}
+.place-btn.active{background:var(--deep);border-color:var(--deep);color:#fff}
+.pcard{background:var(--white);border:1px solid var(--divider);border-radius:12px;
+  padding:18px 20px;margin-bottom:12px;transition:box-shadow .2s,border-color .2s}
+.pcard:hover{box-shadow:0 4px 16px var(--shadow);border-color:#d8c0a0}
+.pcard-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.pcard-content{flex:1;min-width:0}
+.pcard-name{font-weight:700;font-size:16px;color:var(--ink);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.pcard-badge{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  padding:2px 8px;border-radius:100px}
+.badge-kids{background:#E8F5E9;color:#2E7D32;border:1px solid #A5D6A7}
+.badge-garden{background:#E8F0FE;color:#1565C0;border:1px solid #90CAF9}
+.badge-culture{background:#FFF3E6;color:#CC3D00;border:1px solid #F0C090}
+.badge-free{background:#FFF8EC;color:#B8760A;border:1px solid #f0d896}
+.pcard-desc{font-size:13px;color:var(--muted);line-height:1.6;margin:4px 0 8px}
+.pcard-meta{font-size:12px;color:var(--muted);line-height:1.7}
+.pcard-meta strong{color:var(--ink)}
+.bibo-box{background:var(--white);border:1px solid var(--divider);border-radius:12px;padding:18px 20px;margin:16px 0}
+.bibo-box h4{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--deep);margin-bottom:12px}
+.bibo-detail-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin:10px 0}
+.bibo-item{background:var(--pale);border:1px solid #f0c090;border-radius:8px;padding:10px 14px;font-size:13px;line-height:1.6}
+.bibo-item strong{color:var(--ink);display:block;font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+
+
+/* COUNTDOWN */
+.countdown-bar{background:rgba(0,0,0,0.35);backdrop-filter:blur(8px);
+  border-top:1px solid rgba(255,255,255,0.12);padding:10px 12px;
+  display:flex;align-items:center;justify-content:center;gap:4px;flex-wrap:nowrap;
+  position:relative;z-index:2}
+.cd-unit{text-align:center;min-width:0;flex:1;max-width:72px}
+.cd-num{font-family:'Playfair Display',serif;font-size:clamp(22px,5vw,40px);
+  font-weight:900;color:#FFB366;line-height:1;display:block}
+.cd-label{font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  color:rgba(255,255,255,0.55);margin-top:2px;display:block}
+.cd-sep{font-size:24px;color:rgba(255,255,255,0.25);font-weight:300;
+  align-self:center;padding:0 2px;flex-shrink:0}
+.cd-title{display:none}
+.cd-gone{font-family:'Playfair Display',serif;font-size:22px;font-style:italic;
+  color:#FFB366;text-align:center;padding:10px}
+
+/* WEATHER WIDGET */
+.weather-sect{margin:0 0 28px}
+.weather-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:600px){.weather-grid{grid-template-columns:1fr}}
+.wx-card{background:var(--white);border:1px solid var(--divider);border-radius:12px;
+  overflow:hidden;transition:box-shadow .2s}
+.wx-card:hover{box-shadow:0 4px 16px var(--shadow)}
+.wx-head{background:linear-gradient(135deg,var(--deep),var(--accent));
+  padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+.wx-city{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:#fff}
+.wx-dates{font-size:11px;color:rgba(255,255,255,0.65);margin-top:1px}
+.wx-body{padding:12px 14px}
+.wx-days{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+.wx-day{flex-shrink:0;text-align:center;background:var(--pale);border-radius:8px;
+  padding:8px 10px;min-width:52px}
+.wx-day-label{font-size:10px;font-weight:600;color:var(--muted);margin-bottom:4px;
+  text-transform:uppercase;letter-spacing:.5px}
+.wx-icon{font-size:20px;margin:2px 0}
+.wx-temp{font-size:12px;font-weight:700;color:var(--deep)}
+.wx-temp span{font-weight:400;color:var(--muted)}
+.wx-rain{font-size:10px;color:#1565C0;margin-top:2px}
+.wx-loading{color:var(--muted);font-size:13px;font-style:italic;padding:12px 0;text-align:center}
+.wx-error{color:var(--muted);font-size:12px;padding:8px 0;text-align:center}
+
+/* CURRENCY CONVERTER */
+.fx-card{background:var(--white);border:1px solid var(--divider);border-radius:12px;
+  padding:20px;margin:0 0 28px;transition:box-shadow .2s}
+.fx-card:hover{box-shadow:0 4px 16px var(--shadow)}
+.fx-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;
+  flex-wrap:wrap;gap:8px}
+.fx-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--ink)}
+.fx-rate-badge{background:var(--pale);border:1px solid #f0c090;border-radius:100px;
+  padding:4px 12px;font-size:12px;font-weight:600;color:var(--deep)}
+.fx-rate-date{font-size:11px;color:var(--muted);margin-top:2px;text-align:right}
+.fx-row{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;
+  margin-bottom:12px}
+@media(max-width:500px){.fx-row{grid-template-columns:1fr;text-align:center}}
+.fx-field{position:relative}
+.fx-flag{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:18px}
+.fx-input{width:100%;padding:12px 12px 12px 42px;border:2px solid var(--divider);
+  border-radius:10px;font-size:20px;font-weight:700;color:var(--ink);
+  font-family:'DM Sans',sans-serif;transition:border-color .2s;background:var(--white)}
+.fx-input:focus{outline:none;border-color:var(--deep)}
+.fx-label{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:6px}
+.fx-arrow{font-size:24px;color:var(--deep);font-weight:700;text-align:center}
+.fx-quick{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.fx-quick-btn{padding:6px 14px;border:1.5px solid var(--divider);border-radius:100px;
+  background:var(--white);color:var(--muted);font-size:12px;font-weight:600;
+  cursor:pointer;transition:all .2s}
+.fx-quick-btn:hover{border-color:var(--deep);color:var(--deep);background:var(--pale)}
+.fx-source{font-size:11px;color:var(--muted);margin-top:10px;text-align:center}
+.fx-source a{color:var(--mid);text-decoration:none}
+
+
+/* PHRASE CARD */
+.phrase-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;margin:16px 0}
+.phrase-cat{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;
+  color:var(--deep);margin:20px 0 10px;display:flex;align-items:center;gap:10px}
+.phrase-cat::after{content:'';flex:1;height:1px;background:var(--divider)}
+.phr{background:var(--white);border:1px solid var(--divider);border-radius:10px;
+  padding:12px 14px;transition:box-shadow .15s}
+.phr:hover{box-shadow:0 3px 10px var(--shadow)}
+.phr-en{font-size:13px;color:var(--muted);margin-bottom:3px}
+.phr-es{font-size:16px;font-weight:700;color:var(--deep);margin-bottom:3px}
+.phr-ph{font-size:12px;color:var(--muted);font-style:italic}
+.phr-note{font-size:11px;color:#1565C0;background:#EBF5FF;border-radius:4px;
+  padding:2px 8px;display:inline-block;margin-top:5px}
+
+/* PACKING CHECKLIST */
+.pack-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.pack-tab{padding:6px 14px;border-radius:100px;border:1.5px solid var(--divider);
+  background:var(--white);color:var(--muted);font-size:12px;font-weight:600;
+  cursor:pointer;transition:all .2s}
+.pack-tab:hover{border-color:var(--deep);color:var(--deep)}
+.pack-tab.active{background:var(--deep);border-color:var(--deep);color:#fff}
+.pack-cat{display:none}.pack-cat.active{display:block}
+.pack-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:6px}
+.pack-item{display:flex;align-items:flex-start;gap:10px;padding:9px 12px;
+  background:var(--white);border:1px solid var(--divider);border-radius:8px;
+  cursor:pointer;transition:all .15s;user-select:none}
+.pack-item:hover{border-color:var(--deep)}
+.pack-item.checked{background:var(--green-bg);border-color:#A5D6A7}
+.pack-item.checked .pack-label{color:var(--muted);text-decoration:line-through}
+.pack-cb{width:18px;height:18px;border:2px solid var(--divider);border-radius:4px;
+  flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;
+  font-size:11px;transition:all .15s}
+.pack-item.checked .pack-cb{background:var(--green);border-color:var(--green);color:#fff}
+.pack-label{font-size:13px;color:var(--ink);line-height:1.4}
+.pack-label small{display:block;font-size:11px;color:var(--muted)}
+.pack-progress{background:var(--pale);border:1px solid #f0c090;border-radius:8px;
+  padding:10px 16px;margin-bottom:14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.pack-bar-wrap{flex:1;min-width:100px;height:6px;background:var(--divider);
+  border-radius:3px;overflow:hidden}
+.pack-bar{height:100%;background:var(--green);border-radius:3px;transition:width .3s}
+.pack-pct{font-size:13px;font-weight:700;color:var(--deep);min-width:40px;text-align:right}
+.pack-reset{font-size:11px;color:var(--muted);cursor:pointer;text-decoration:underline;
+  background:none;border:none;padding:0;margin-left:auto}
+
+/* ALHAMBRA BRIEFING */
+.alh-hero{background:linear-gradient(135deg,#3D0A00,#7B2000);border-radius:12px;
+  padding:20px 22px;margin-bottom:20px}
+.alh-hero h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;
+  color:#FFB366;margin-bottom:6px}
+.alh-hero p{font-size:14px;color:rgba(255,255,255,0.82);line-height:1.6}
+.alh-seq{border-radius:10px;overflow:hidden;border:1px solid var(--divider);margin:16px 0}
+.alh-row{display:grid;grid-template-columns:90px 1fr;border-bottom:1px solid var(--divider)}
+.alh-row:last-child{border-bottom:none}
+.alh-row.hl{background:var(--pale)}
+.alh-time{padding:13px 12px;font-size:11px;font-weight:700;color:var(--deep);
+  background:#FFF6EE;border-right:1px solid var(--divider);display:flex;align-items:flex-start}
+.alh-row.hl .alh-time{background:var(--pale)}
+.alh-detail{padding:13px 16px}
+.alh-detail strong{font-size:14px;color:var(--ink);display:block;margin-bottom:2px}
+.alh-detail p{font-size:13px;color:var(--muted);line-height:1.5;margin:0}
+.alh-kids{font-size:12px;color:#2E7D32;background:#E8F5E9;border-radius:4px;
+  padding:2px 8px;display:inline-block;margin-top:5px}
+.alh-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin:16px 0}
+.alh-card{background:var(--white);border:1px solid var(--divider);border-radius:10px;padding:14px 16px}
+.alh-card-icon{font-size:22px;margin-bottom:6px}
+.alh-card-title{font-weight:700;font-size:14px;color:var(--ink);margin-bottom:4px}
+.alh-card-text{font-size:13px;color:var(--muted);line-height:1.5}
+
+</style>
+</head><body>
+<header class="hero">
+  <div class="hero-slides"><div class="slide" data-key="malaga_seafront"></div><div class="slide" data-key="malaga_cat_ext"></div><div class="slide" data-key="malaga_town1"></div><div class="slide" data-key="malaga_town2"></div><div class="slide" data-key="malaga_cat_int"></div><div class="slide" data-key="cordoba_ext"></div><div class="slide" data-key="cordoba_int"></div><div class="slide" data-key="cordoba_bridge"></div><div class="slide" data-key="granada_ext"></div><div class="slide" data-key="granada_pal"></div><div class="slide" data-key="flamenco"></div><div class="slide" data-key="train_ave"></div><div class="slide" data-key="train_interior"></div><div class="slide" data-key="train_commuter"></div><div class="slide" data-key="slide_mirador"></div><div class="slide" data-key="slide_patio"></div><div class="slide" data-key="slide_albaic"></div><div class="slide" data-key="slide_cordoba_st"></div><div class="slide" data-key="slide_granada_st"></div><div class="slide" data-key="slide_airport"></div><div class="slide" data-key="plane_window"></div><div class="slide" data-key="alcazaba"></div><div class="slide" data-key="generalife"></div><div class="slide" data-key="bib_rambla"></div><div class="slide" data-key="bb_hotel"></div><div class="slide" data-key="muelle_uno"></div><div class="slide" data-key="calleja_closeup"></div><div class="slide" data-key="rio_darro"></div><div class="slide" data-key="sacromonte"></div><div class="slide" data-key="capilla_real"></div><div class="slide" data-key="patio_arrayanes"></div><div class="slide" data-key="tapas"></div></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eye">Family Holiday &nbsp;·&nbsp; April 2026</div>
+    <h1>Andalusia</h1>
+    <div class="hero-sub">Málaga &nbsp;·&nbsp; Córdoba &nbsp;·&nbsp; Granada</div>
+    <div class="pills">
+      <span class="pill">✈️ FR6649 · 4 Apr</span>
+      <span class="pill">🏨 7 nights · 3 cities</span>
+      <span class="pill">👨‍👩‍👧‍👦 Family of 4</span>
+      <span class="pill">🕌 Alhambra · 10 Apr</span>
+      <span class="pill">✈️ FR6648 · 11 Apr</span>
+    </div>
+
+  </div><!-- end hero-content -->
+  <div class="countdown-bar" id="countdown-bar">
+    <div class="cd-title">✈️ Departing Luton in</div>
+    <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-label">Days</span></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-label">Hours</span></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-label">Mins</span></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-label">Secs</span></div>
+  </div>
+</header>
+<nav class="sticky-nav"><div class="nav-inner">
+  <a class="nav-tab active" onclick="show('overview',this)">Overview</a>
+  <a class="nav-tab" onclick="show('bookings',this)">Key Bookings</a>
+  <a class="nav-tab" onclick="show('itinerary',this)">Itinerary</a>
+  <a class="nav-tab" onclick="show('food',this)">Food &amp; Bars</a>
+  <a class="nav-tab" onclick="show('tips',this)">Tips</a>
+  <a class="nav-tab" onclick="show('places',this)">Places to Visit</a>
+  <a class="nav-tab" onclick="show('phrases',this)">Phrases</a>
+  <a class="nav-tab" onclick="show('packing',this)">Packing</a>
+  <a class="nav-tab" onclick="show('alhambra',this)">Alhambra</a>
+</div></nav>
+<main class="content">
+<section class="section active" id="sec-overview">
+  <div class="sec-header">
+    <div class="sec-title">At a Glance</div><div class="sec-bar"></div>
+    <div class="sec-sub">Everything you need to know, in one place</div>
+  </div>
+
+  <!-- CURRENCY CONVERTER -->
+  <div class="fx-card">
+    <div class="fx-head">
+      <div>
+        <div class="fx-title">💷 Currency Converter</div>
+        <div class="fx-rate-date" id="fx-date">Loading rate...</div>
+      </div>
+      <div class="fx-rate-badge" id="fx-badge">£1 = €--</div>
+    </div>
+    <div class="fx-row">
+      <div class="fx-field">
+        <div class="fx-label">Euros (EUR)</div>
+        <div style="position:relative">
+          <span class="fx-flag">🇪🇸</span>
+          <input class="fx-input" id="fx-eur" type="number" value="10" min="0" step="0.01" inputmode="decimal">
+        </div>
+      </div>
+      <div class="fx-arrow">→</div>
+      <div class="fx-field">
+        <div class="fx-label">Pounds (GBP)</div>
+        <div style="position:relative">
+          <span class="fx-flag">🇬🇧</span>
+          <input class="fx-input" id="fx-gbp" type="number" value="--" min="0" step="0.01" inputmode="decimal">
+        </div>
+      </div>
+    </div>
+    <div class="fx-quick">
+      <span style="font-size:12px;color:var(--muted);align-self:center">Quick:</span>
+      <button class="fx-quick-btn" onclick="fxSet(5)">€5</button>
+      <button class="fx-quick-btn" onclick="fxSet(10)">€10</button>
+      <button class="fx-quick-btn" onclick="fxSet(20)">€20</button>
+      <button class="fx-quick-btn" onclick="fxSet(50)">€50</button>
+      <button class="fx-quick-btn" onclick="fxSet(100)">€100</button>
+    </div>
+    <div class="fx-source">Rate: ECB via <a href="https://frankfurter.dev" target="_blank">Frankfurter</a> · Updated daily ~16:00 CET · Similar to Halifax Clarity interbank rate</div>
+  </div>
+
+  <!-- WEATHER FORECAST -->
+  <div class="weather-sect">
+    <div class="subhead">Weather Forecast — 4–11 April</div>
+    <div class="weather-grid">
+      <div class="wx-card">
+        <div class="wx-head">
+          <div><div class="wx-city">✈️ Málaga</div><div class="wx-dates">Sat 4 Apr</div></div>
+          <span style="font-size:24px">🌊</span>
+        </div>
+        <div class="wx-body"><div class="wx-days" id="wx-malaga"><div class="wx-loading">Loading...</div></div></div>
+      </div>
+      <div class="wx-card">
+        <div class="wx-head">
+          <div><div class="wx-city">🕌 Córdoba</div><div class="wx-dates">Sun 5 – Tue 7 Apr</div></div>
+          <span style="font-size:24px">🌸</span>
+        </div>
+        <div class="wx-body"><div class="wx-days" id="wx-cordoba"><div class="wx-loading">Loading...</div></div></div>
+      </div>
+      <div class="wx-card">
+        <div class="wx-head">
+          <div><div class="wx-city">🏰 Granada</div><div class="wx-dates">Tue 7 – Sat 11 Apr</div></div>
+          <span style="font-size:24px">⭐</span>
+        </div>
+        <div class="wx-body"><div class="wx-days" id="wx-granada"><div class="wx-loading">Loading...</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="route-map">
+<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;font-family:'DM Sans',sans-serif">
+  <defs>
+    <linearGradient id="bggrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3D0A00"/>
+      <stop offset="100%" stop-color="#7B2000"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="rgba(255,179,102,0.7)"/>
+    </marker>
+  </defs>
+  <rect width="700" height="200" fill="url(#bggrad)"/>
+  <!-- subtle grid lines -->
+  <line x1="0" y1="100" x2="700" y2="100" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="350" y1="0" x2="350" y2="200" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- Route line -->
+  <path d="M 140,100 C 240,60 310,140 370,100 C 430,60 490,140 560,100"
+        fill="none" stroke="rgba(255,179,102,0.5)" stroke-width="2"
+        stroke-dasharray="8,5" marker-end="url(#arr)"/>
+
+  <!-- LTN -->
+  <circle cx="70" cy="100" r="18" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <text x="70" y="95" text-anchor="middle" font-size="18" fill="white">✈️</text>
+  <text x="70" y="110" text-anchor="middle" font-size="9" font-weight="600" fill="rgba(255,255,255,0.7)" letter-spacing="1">LTN</text>
+  <text x="70" y="140" text-anchor="middle" font-size="10" fill="rgba(255,179,102,0.9)" font-weight="600">16:10</text>
+  <text x="70" y="153" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.5)">Sat 4 Apr</text>
+
+  <!-- Málaga -->
+  <circle cx="210" cy="100" r="22" fill="var(--deep,#CC3D00)" stroke="#FFB366" stroke-width="2"/>
+  <text x="210" y="94" text-anchor="middle" font-size="10" font-weight="700" fill="white">MÁLAGA</text>
+  <text x="210" y="107" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.75)">Night 1</text>
+  <text x="210" y="140" text-anchor="middle" font-size="9" fill="rgba(255,179,102,0.8)">Arr 20:05</text>
+
+  <!-- Train 1 -->
+  <text x="295" y="78" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.5)">🚆 47 min</text>
+
+  <!-- Córdoba -->
+  <circle cx="380" cy="100" r="22" fill="var(--deep,#CC3D00)" stroke="#FFB366" stroke-width="2"/>
+  <text x="380" y="94" text-anchor="middle" font-size="10" font-weight="700" fill="white">CÓRDOBA</text>
+  <text x="380" y="107" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.75)">Nights 2–3</text>
+
+  <!-- Train 2 -->
+  <text x="475" y="78" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.5)">🚆 1h 45m</text>
+
+  <!-- Granada -->
+  <circle cx="560" cy="100" r="26" fill="#8B0000" stroke="#FFB366" stroke-width="2.5"/>
+  <text x="560" y="92" text-anchor="middle" font-size="10" font-weight="700" fill="white">GRANADA</text>
+  <text x="560" y="105" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.75)">Nights 4–7</text>
+  <text x="560" y="116" text-anchor="middle" font-size="9" fill="#FFB366">★ Alhambra</text>
+
+  <!-- AGP return -->
+  <circle cx="640" cy="100" r="18" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <text x="640" y="95" text-anchor="middle" font-size="18" fill="white">✈️</text>
+  <text x="640" y="110" text-anchor="middle" font-size="9" font-weight="600" fill="rgba(255,255,255,0.7)" letter-spacing="1">AGP</text>
+  <text x="640" y="140" text-anchor="middle" font-size="10" fill="rgba(255,179,102,0.9)" font-weight="600">13:55</text>
+  <text x="640" y="153" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.5)">Sat 11 Apr</text>
+
+  <!-- Title -->
+  <text x="350" y="25" text-anchor="middle" font-size="13" font-weight="700"
+        fill="rgba(255,255,255,0.9)" letter-spacing="4">ANDALUSIA ROUTE</text>
+</svg>
+</div>
+  <div class="glance-grid">
+<div class="gc"><div class="gc-icon">✈️</div><div class="gc-label">Outbound Flight</div><div class="gc-value">Ryanair FR6649</div><div class="gc-sub">LTN → AGP · Sat 4 Apr · 16:10–20:05</div><div class="gc-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ1Qb35NA3dkgR0BrZSvPnBi4">📍 Maps</a><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div></div>
+<div class="gc"><div class="gc-icon">✈️</div><div class="gc-label">Return Flight</div><div class="gc-value">Ryanair FR6648</div><div class="gc-sub">AGP → LTN · Sat 11 Apr · 13:55–15:45</div><div class="gc-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJpTC6dhj6cg0Rmj7eRy-ttVc">📍 Maps</a><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div></div>
+<div class="gc"><div class="gc-icon">🏨</div><div class="gc-label">Night 1 — Málaga</div><div class="gc-value">B&amp;B Hotel Málaga Centro</div><div class="gc-sub">Ref: 6136809407 · €297 on arrival</div><div class="gc-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJGb-8q_b3cg0R8HLBQPOzFcg">📍 Maps</a><a class="wlink" href="https://www.hotel-bb.com/en/hotel/malaga-centro" target="_blank">🌐 Website</a><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div></div>
+<div class="gc"><div class="gc-icon">🏠</div><div class="gc-label">Nights 2–3 — Córdoba</div><div class="gc-value">The Balcony of the Mosque</div><div class="gc-sub">Ref: HMWK8SE58F · Airbnb</div><div class="gc-links"><a class="mlink" href="comgooglemaps://?q=37.8792,-4.7791&amp;zoom=17">📍 Maps</a><a class="wlink" href="https://www.airbnb.com/rooms/22048726" target="_blank">🌐 Website</a></div></div>
+<div class="gc"><div class="gc-icon">🏠</div><div class="gc-label">Nights 4–7 — Granada</div><div class="gc-value">Bibo Suites Palacio de Pórtago</div><div class="gc-sub">Ref: 27251400 · 2-bed apartment</div><div class="gc-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJj2C6QkD9cQ0RvmQ_RVaYMJo">📍 Maps</a><a class="wlink" href="https://bibosuites.com/bibo-palacio-portago/" target="_blank">🌐 Website</a></div></div>
+<div class="gc"><div class="gc-icon">🕌</div><div class="gc-label">Mezquita-Catedral</div><div class="gc-value">Mon 6 Apr · 10:00</div><div class="gc-sub">Ref: 95794322 · Audio guide included</div><div class="gc-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJzxYazoIgbQ0RNvYb-FPD6-8">📍 Maps</a><a class="wlink" href="https://mezquita-catedraldecordoba.es/en/" target="_blank">🌐 Website</a><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div></div>
+<div class="gc"><div class="gc-icon">💃</div><div class="gc-label">Flamenco Show</div><div class="gc-value">Wed 8 Apr · 18:00</div><div class="gc-sub">Ref: 95798502 · Arrive 17:30</div><div class="gc-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJDwDEIMb8cQ0RJYYHQgSGKVA">📍 Maps</a><a class="wlink" href="https://flamencogranada.com/en/" target="_blank">🌐 Website</a><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div></div>
+<div class="gc hl"><div class="gc-icon">⭐</div><div class="gc-label">THE ALHAMBRA</div><div class="gc-value">Fri 10 Apr · Nasrid Palaces 17:30</div><div class="gc-sub">Order: 2020400LXLYO · PASSPORTS REQUIRED</div><div class="gc-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJO7l_l7f8cQ0Rf6IhEu_RjYA">📍 Maps</a><a class="wlink" href="https://www.alhambra-patronato.es/en/" target="_blank">🌐 Website</a><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div></div>
+  </div>
+<div class="alert alert-warn"><span class="alert-icon">🛂</span><div><strong>PASSPORTS:</strong> Required for Alhambra entry AND as ID on all Renfe trains. Keep them accessible every day.</div></div>
+<div class="alert alert-warn"><span class="alert-icon">💳</span><div><strong>B&amp;B Hotel Málaga:</strong> €297 payable <em>on arrival</em> — not prepaid. Have card or cash ready Saturday evening.</div></div>
+<div class="alert alert-info"><span class="alert-icon">🌿</span><div><strong>Semana Santa:</strong> Holy Week ~2–6 April. Beautiful processions but larger crowds in all three cities.</div></div>
+<div class="alert alert-green"><span class="alert-icon">🍺</span><div><strong>Granada tapas:</strong> A FREE tapa comes with every drink. Keep the rounds going for more variety!</div></div>
+</section>
+<section class="section" id="sec-bookings">
+  <div class="sec-header">
+    <div class="sec-title">Key Bookings &amp; Getting Around</div><div class="sec-bar"></div>
+    <div class="sec-sub">Accommodation, trains and booked attractions</div>
+  </div>
+  <div class="subhead">Accommodation</div>
+  <div class="accom-grid">
+    <div class="acard">
+      <div class="acard-head"><div class="acard-nights">Night 1</div>
+        <div class="acard-name">B&amp;B Hotel Málaga Centro</div><div class="acard-city">Málaga</div></div>
+      <div class="acard-body">
+        <div class="acard-row"><span class="acard-k">Date</span><span class="acard-v">Sat 4 April (1 night)</span></div>
+        <div class="acard-row"><span class="acard-k">Address</span><span class="acard-v">Av. de Fátima 7-9, 29007 Málaga</span></div>
+        <div class="acard-row"><span class="acard-k">Check-in</span><span class="acard-v">From 14:00</span></div>
+        <div class="acard-row"><span class="acard-k">Payment</span><span class="acard-v">€297 payable <strong>on arrival</strong></span></div>
+        <div class="acard-row"><span class="acard-k">Ref</span><span class="acard-v">6136809407 (Booking.com)</span></div>
+        <div class="acard-row"><span class="acard-k">Links</span><span class="acard-v"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJGb-8q_b3cg0R8HLBQPOzFcg">📍 Maps</a><a class="wlink" href="https://www.hotel-bb.com/en/hotel/malaga-centro" target="_blank">🌐 Website</a><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></span></div></div></div>
+    <div class="acard">
+      <div class="acard-head"><div class="acard-nights">Nights 2–3</div>
+        <div class="acard-name">The Balcony of the Mosque</div><div class="acard-city">Córdoba</div></div>
+      <div class="acard-body">
+        <div class="acard-row"><span class="acard-k">Dates</span><span class="acard-v">Sun 5 – Tue 7 Apr (2 nights)</span></div>
+        <div class="acard-row"><span class="acard-k">Address</span><span class="acard-v">Plaza de Santa Catalina, 14003 Córdoba</span></div>
+        <div class="acard-row"><span class="acard-k">Check-in</span><span class="acard-v">From 14:00 via building staff</span></div>
+        <div class="acard-row"><span class="acard-k">Check-out</span><span class="acard-v">By 11:00</span></div>
+        <div class="acard-row"><span class="acard-k">Ref</span><span class="acard-v">HMWK8SE58F (Airbnb)</span></div>
+        <div class="acard-row"><span class="acard-k">⚠️ Action</span><span class="acard-v">Check Airbnb app Fri 3 Apr for entry code</span></div>
+        <div class="acard-row"><span class="acard-k">Links</span><span class="acard-v"><a class="mlink" href="comgooglemaps://?q=37.8792,-4.7791&amp;zoom=17">📍 Maps</a><a class="wlink" href="https://www.airbnb.com/rooms/22048726" target="_blank">🌐 Airbnb listing</a></span></div></div></div>
+    <div class="acard">
+      <div class="acard-head"><div class="acard-nights">Nights 4–7</div>
+        <div class="acard-name">Bibo Suites – Palacio de Pórtago</div><div class="acard-city">Granada</div></div>
+      <div class="acard-body">
+        <div class="acard-row"><span class="acard-k">Dates</span><span class="acard-v">Tue 7 – Sat 11 Apr (4 nights)</span></div>
+        <div class="acard-row"><span class="acard-k">Address</span><span class="acard-v">C. San Matías 20, 18009 Granada</span></div>
+        <div class="acard-row"><span class="acard-k">Apartment</span><span class="acard-v">2-bed: 1 double + 1 twin + sofa. Full kitchen, WiFi.</span></div>
+        <div class="acard-row"><span class="acard-k">Check-in</span><span class="acard-v">From 15:00</span></div>
+        <div class="acard-row"><span class="acard-k">Check-out</span><span class="acard-v">By 11:00</span></div>
+        <div class="acard-row"><span class="acard-k">Ref</span><span class="acard-v">27251400 (bibosuites.com)</span></div>
+
+        <div class="acard-row"><span class="acard-k">Check-in</span><span class="acard-v">From 15:00 (online check-in required — see link emailed ahead)</span></div>
+        <div class="acard-row"><span class="acard-k">Entry codes</span><span class="acard-v">Sent on day of arrival. Enter code + # on black keypad at building entrance, then code + # on apartment door keypad.</span></div>
+        <div class="acard-row"><span class="acard-k">Reception</span><span class="acard-v">Bibo Portago, C. San Mat&#237;as 20 &nbsp;·&nbsp; 10am–9pm &nbsp;|&nbsp; BiBo Plaza Nueva, Plaza Nueva 2 &nbsp;·&nbsp; 9am–10pm</span></div>
+        <div class="acard-row"><span class="acard-k">Phone</span><span class="acard-v"><a href="tel:+34958480009">+34 958 48 00 09</a></span></div>
+        <div class="acard-row"><span class="acard-k">WhatsApp</span><span class="acard-v"><a href="https://wa.me/34645767382">+34 645 767 382</a> (9am–10pm)</span></div>
+        <div class="acard-row"><span class="acard-k">Email</span><span class="acard-v"><a href="mailto:hola@bibosuites.com">hola@bibosuites.com</a></span></div>
+        <div class="acard-row"><span class="acard-k">⚠️ Pre-arrival</span><span class="acard-v">All 4 guests must complete online check-in via emailed link <em>before</em> arrival. Do this as soon as the email arrives.</span></div>
+        <div class="acard-row"><span class="acard-k">Driving</span><span class="acard-v">Granada ZBE Low Emission Zone. C. San Mat&#237;as strictly no-driving. Private car park 120m away — contact them to reserve.</span></div>
+        <div class="acard-row"><span class="acard-k">Links</span><span class="acard-v"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJj2C6QkD9cQ0RvmQ_RVaYMJo">📍 Maps</a><a class="wlink" href="https://bibosuites.com/bibo-palacio-portago/" target="_blank">🌐 Website</a></span></div></div></div>
+  </div>
+  <div class="subhead">Trains — All Booked</div>
+  <div class="tbl-wrap"><table class="dtbl">
+    <thead><tr><th>Train</th><th>Date</th><th>From</th><th>Dep</th><th>To</th><th>Arr</th><th>Ticket</th></tr></thead>
+    <tbody>
+      <tr><td><span class="trn-no">02153</span></td><td>Sun 5 Apr</td><td><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=M%C3%A1laga%20Mar%C3%ADa%20Z.&amp;query_place_id=ChIJ8VDThZX3cg0RWLKm3wEwI-o">📍 Málaga María Z.</a></td><td><span class="trn-time">14:56</span></td><td><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=C%C3%B3rdoba&amp;query_place_id=ChIJQ89oxl3fbA0R64vDbr3xVx8">📍 Córdoba</a></td><td><span class="trn-time">15:43</span></td><td><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></td></tr>
+      <tr><td><span class="trn-no">08335</span></td><td>Tue 7 Apr</td><td><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=C%C3%B3rdoba&amp;query_place_id=ChIJQ89oxl3fbA0R64vDbr3xVx8">📍 Córdoba</a></td><td><span class="trn-time">13:06</span></td><td><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Granada&amp;query_place_id=ChIJUb-Hh-78cQ0RMQxAdMwJE1s">📍 Granada</a></td><td><span class="trn-time">14:51</span></td><td><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></td></tr>
+      <tr><td><span class="trn-no">08915</span></td><td>Sat 11 Apr</td><td><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Granada&amp;query_place_id=ChIJUb-Hh-78cQ0RMQxAdMwJE1s">📍 Granada</a></td><td><span class="trn-time">07:36</span></td><td><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=M%C3%A1laga%20Mar%C3%ADa%20Z.&amp;query_place_id=ChIJ8VDThZX3cg0RWLKm3wEwI-o">📍 Málaga María Z.</a></td><td><span class="trn-time">09:00</span></td><td><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></td></tr>
+      <tr><td><span class="trn-no">C1</span></td><td>Sat 11 Apr</td><td><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=M%C3%A1laga%20Mar%C3%ADa%20Z.&amp;query_place_id=ChIJ8VDThZX3cg0RWLKm3wEwI-o">📍 Málaga María Z.</a></td><td><span class="trn-time">~09:05</span></td><td><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=AGP%20Airport&amp;query_place_id=ChIJpTC6dhj6cg0Rmj7eRy-ttVc">📍 AGP Airport</a></td><td><span class="trn-time">~09:17</span></td><td style="font-size:12px;color:var(--muted)">No ticket needed</td></tr>
+    </tbody></table></div>
+<div class="alert alert-warn"><span class="alert-icon">🛂</span><div><strong>Passports:</strong> Carry as ID on all Renfe trains. No exceptions.</div></div>
+  <div class="subhead">Booked Attractions &amp; Flights</div>
+  <div class="book-grid">
+    <div class="bcard"><div class="bcard-type">✈️ Outbound Flight</div><div class="bcard-name">Ryanair FR6649</div><div class="bcard-ref">LTN → AGP · Sat 4 Apr · 16:10</div><div class="bcard-det">Departs Luton Terminal Bay D.</div><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Luton%20Airport&amp;query_place_id=ChIJ1Qb35NA3dkgR0BrZSvPnBi4">📍 Luton Airport</a><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div>
+    <div class="bcard"><div class="bcard-type">✈️ Return Flight</div><div class="bcard-name">Ryanair FR6648</div><div class="bcard-ref">AGP → LTN · Sat 11 Apr · 13:55</div><div class="bcard-det">Board C1 ~09:05 from María Zambrano.</div><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=M%C3%A1laga%20Airport&amp;query_place_id=ChIJpTC6dhj6cg0Rmj7eRy-ttVc">📍 Málaga Airport</a><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div>
+    <div class="bcard"><div class="bcard-type">🕌 Mosque-Cathedral</div><div class="bcard-name">Mezquita-Catedral de Córdoba</div><div class="bcard-ref">Ref: 95794322</div><div class="bcard-det">📅 Monday 6 April · Entry 10:00<br>Arrive 09:45 to collect audio guide.</div><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJzxYazoIgbQ0RNvYb-FPD6-8">📍 Maps</a><a class="wlink" href="https://mezquita-catedraldecordoba.es/en/" target="_blank">🌐 Website</a><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div>
+    <div class="bcard hl"><div class="bcard-type">⭐ World Heritage Site</div><div class="bcard-name">Alhambra, Granada</div><div class="bcard-ref">Order: 2020400LXLYO | Ref: H0LXLYO/1</div><div class="bcard-det">📅 Friday 10 April<br>Arrive ~13:00. <strong>Nasrid Palaces: 17:30</strong></div><div class="bcard-warn">🛂 PASSPORTS REQUIRED — all 4 of you</div><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJO7l_l7f8cQ0Rf6IhEu_RjYA">📍 Maps</a><a class="wlink" href="https://www.alhambra-patronato.es/en/" target="_blank">🌐 Website</a><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div>
+    <div class="bcard"><div class="bcard-type">🎸 Flamenco</div><div class="bcard-name">Jardines de Zoraya</div><div class="bcard-ref">Ref: 95798502</div><div class="bcard-det">📅 Wednesday 8 April · Show 18:00<br>Arrive by 17:30. C. Panaderos 32, Albaicín.</div><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJDwDEIMb8cQ0RJYYHQgSGKVA">📍 Maps</a><a class="wlink" href="https://flamencogranada.com/en/" target="_blank">🌐 Website</a><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div>
+  </div>
+</section>
+<section class="section" id="sec-itinerary">
+  <div class="sec-header">
+    <div class="sec-title">Day-by-Day Itinerary</div><div class="sec-bar"></div>
+    <div class="sec-sub">8 days · 3 cities · a lifetime of memories</div>
+  </div>
+  <div class="day-tabs">
+    <button class="day-btn active" onclick="showDay(1,this)">Day 1</button>
+    <button class="day-btn" onclick="showDay(2,this)">Day 2</button>
+    <button class="day-btn" onclick="showDay(3,this)">Day 3</button>
+    <button class="day-btn" onclick="showDay(4,this)">Day 4</button>
+    <button class="day-btn" onclick="showDay(5,this)">Day 5</button>
+    <button class="day-btn" onclick="showDay(6,this)">Day 6</button>
+    <button class="day-btn" onclick="showDay(7,this)">Day 7</button>
+    <button class="day-btn" onclick="showDay(8,this)">Day 8</button>
+  </div>
+<div class="day-panel active" id="day-1">
+<div class="city-banner"><span>✈️</span><span class="city-banner-text">MÁLAGA</span></div>
+<div class="photo-strip n4"><div class="ps-cell"><img class="ps-img" data-key="malaga_seafront" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="malaga_cat_ext" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="malaga_town2" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="bb_hotel" alt=""></div></div><div class="day-hdr"><div><div class="day-title">Day 1 · Saturday 4 April</div><div class="day-sub">Arrival Day</div></div><div class="day-badge">Málaga</div></div>
+<div class="timeline">
+<div class="tl-row"><div class="tl-time">16:10</div><div class="tl-detail"><strong>Depart Luton Airport — FR6649</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Luton%20Airport%20Departures%20Bay%20D&amp;query_place_id=ChIJ1Qb35NA3dkgR0BrZSvPnBi4">📍 Luton Airport Departures Bay D</a><br><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a><div class="tl-note">Terminal, Bay D</div></div></div>
+<div class="tl-row even"><div class="tl-time">20:05</div><div class="tl-detail"><strong>Land Málaga Airport (AGP)</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Malaga%20Airport%20Arrivals%20Hall&amp;query_place_id=ChIJpTC6dhj6cg0Rmj7eRy-ttVc">📍 Malaga Airport Arrivals Hall</a></div></div>
+<div class="tl-row"><div class="tl-time">~20:30</div><div class="tl-detail"><strong>Clear customs &amp; collect luggage</strong></div></div>
+<div class="tl-row even"><div class="tl-time">~20:45</div><div class="tl-detail"><strong>Walk to Uber pick-up point</strong><br><a class="mlink" href="comgooglemaps://?q=36.6772266,-4.4921312&amp;zoom=17">📍 Malaga Airport Uber Pickup Point</a><div class="tl-note">Follow signs for Arrivals pick-up / Recogida</div></div></div>
+<div class="tl-row"><div class="tl-time">~21:00</div><div class="tl-detail"><strong>Uber to B&amp;B Hotel Málaga Centro</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=BB%20Hotel%20Malaga%20Centro&amp;query_place_id=ChIJGb-8q_b3cg0R8HLBQPOzFcg">📍 BB Hotel Malaga Centro</a><br><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a><div class="tl-note">~€20, ~15 min</div></div></div>
+<div class="tl-row even"><div class="tl-time">~21:30</div><div class="tl-detail"><strong>Check in and freshen up</strong></div></div>
+<div class="tl-row"><div class="tl-time">~22:00</div><div class="tl-detail"><strong>Dinner nearby — see Food &amp; Bars tab</strong></div></div>
+</div></div>
+<div class="day-panel" id="day-2">
+<div class="city-banner"><span>🚆</span><span class="city-banner-text">MÁLAGA MORNING → CÓRDOBA</span></div>
+<div class="photo-strip n4"><div class="ps-cell"><img class="ps-img" data-key="malaga_town1" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="malaga_cat_int" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="muelle_uno" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="train_ave" alt=""></div></div><div class="day-hdr"><div><div class="day-title">Day 2 · Sunday 5 April</div><div class="day-sub">Málaga Morning, then on to Córdoba</div></div><div class="day-badge">Málaga / Córdoba</div></div>
+<div class="timeline">
+<div class="tl-row"><div class="tl-time">08:30–09:30</div><div class="tl-detail"><strong>Málaga Cathedral — free entry window</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Malaga%20Cathedral%20La%20Manquita&amp;query_place_id=ChIJjanOEZX3cg0R-hlvsHnCw_w">📍 Malaga Cathedral La Manquita</a><div class="tl-note">Brief visit only.</div></div></div>
+<div class="tl-row even"><div class="tl-time">09:30</div><div class="tl-detail"><strong>Breakfast in the old town</strong><div class="tl-note">See Food &amp; Bars → Málaga</div></div></div>
+<div class="tl-row"><div class="tl-time">10:00–14:00</div><div class="tl-detail"><strong>Free time in Málaga — La Alcazabilla, Muelle Uno waterfront</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Muelle%20Uno%20Waterfront%20Malaga&amp;query_place_id=ChIJo3DE5-j3cg0RQ8BidXnADiI">📍 Muelle Uno Waterfront Malaga</a></div></div>
+<div class="tl-row even"><div class="tl-time">~14:00</div><div class="tl-detail"><strong>Head to Málaga María Zambrano station</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Malaga%20Maria%20Zambrano%20Station&amp;query_place_id=ChIJ8VDThZX3cg0RWLKm3wEwI-o">📍 Malaga Maria Zambrano Station</a></div></div>
+<div class="tl-row"><div class="tl-time">14:56</div><div class="tl-detail"><strong>Train 02153 departs — Passports as ID</strong><br><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div></div>
+<div class="tl-row even"><div class="tl-time">15:43</div><div class="tl-detail"><strong>Arrive Córdoba Julio Anguita station</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Cordoba%20Julio%20Anguita%20Station&amp;query_place_id=ChIJQ89oxl3fbA0R64vDbr3xVx8">📍 Cordoba Julio Anguita Station</a></div></div>
+<div class="tl-row"><div class="tl-time">~16:00</div><div class="tl-detail"><strong>Check in to apartment</strong><br><a class="mlink" href="comgooglemaps://?q=37.8792,-4.7791&amp;zoom=17">📍 The Balcony of the Mosque Cordoba</a><div class="tl-note">Have Airbnb app open for door code</div></div></div>
+<div class="tl-row even"><div class="tl-time">~17:30</div><div class="tl-detail"><strong>Evening: Judería, Calleja de las Flores, Roman Bridge</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Juderia%20Jewish%20Quarter%20Cordoba&amp;query_place_id=ChIJg8JpK4MgbQ0RwdpGgU4Ezl4">📍 Juderia Jewish Quarter Cordoba</a></div></div>
+<div class="tl-row"><div class="tl-time">~20:00</div><div class="tl-detail"><strong>Tapas dinner — see Food &amp; Bars → Córdoba</strong><div class="tl-note">Tapas are paid in Córdoba</div></div></div>
+</div></div>
+<div class="day-panel" id="day-3">
+<div class="city-banner"><span>🕌</span><span class="city-banner-text">CÓRDOBA</span></div>
+<div class="photo-strip n4"><div class="ps-cell"><img class="ps-img" data-key="cordoba_ext" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="cordoba_int" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="cordoba_bridge" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="calleja_closeup" alt=""></div></div><div class="day-hdr"><div><div class="day-title">Day 3 · Monday 6 April</div><div class="day-sub">Full Day Córdoba — Mezquita Day</div></div><div class="day-badge">Córdoba</div></div>
+<div class="alert alert-warn"><span class="alert-icon">⚠️</span><div><strong>Alcázar de los Reyes Cristianos is CLOSED on Mondays.</strong> Focus on the Mezquita, Judería, Calleja de las Flores and Roman Bridge.</div></div>
+<div class="timeline">
+<div class="tl-row"><div class="tl-time">09:45</div><div class="tl-detail"><strong>Arrive Mezquita ticket desk — collect audio guide</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Mezquita%20Catedral%20de%20Cordoba&amp;query_place_id=ChIJzxYazoIgbQ0RNvYb-FPD6-8">📍 Mezquita Catedral de Cordoba</a><div class="tl-note">Entry sharp at 10:00</div></div></div>
+<div class="tl-row even"><div class="tl-time">10:00–12:00</div><div class="tl-detail"><strong>Visit Mezquita-Catedral</strong><br><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a><div class="tl-note">BOOKED Ref 95794322. ~2 hours. Audio guide included.</div></div></div>
+<div class="tl-row"><div class="tl-time">12:00</div><div class="tl-detail"><strong>Calleja de las Flores &amp; photos</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Calleja%20de%20las%20Flores%20Cordoba&amp;query_place_id=ChIJuUyVSp0gbQ0RtNbGE6EKA60">📍 Calleja de las Flores Cordoba</a><div class="tl-note">Just north of the Mezquita</div></div></div>
+<div class="tl-row even"><div class="tl-time">~12:30</div><div class="tl-detail"><strong>Lunch — Bodegas Mezquita Céspedes or Casa Pepe</strong></div></div>
+<div class="tl-row"><div class="tl-time">~14:00</div><div class="tl-detail"><strong>Judería — Synagogue, Zoco artisan market</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Juderia%20Synagogue%20Cordoba&amp;query_place_id=ChIJFx1PuJ0gbQ0R5BYdygFbbM8">📍 Juderia Synagogue Cordoba</a></div></div>
+<div class="tl-row even"><div class="tl-time">~16:00</div><div class="tl-detail"><strong>Roman Bridge &amp; Torre de la Calahorra</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Puente%20Romano%20Roman%20Bridge%20Cordoba&amp;query_place_id=ChIJZRKDoZwgbQ0RcdJtzzN6cNY">📍 Puente Romano Roman Bridge Cordoba</a></div></div>
+<div class="tl-row"><div class="tl-time">~18:00</div><div class="tl-detail"><strong>Rest / gelato stop</strong></div></div>
+<div class="tl-row even"><div class="tl-time">~20:00</div><div class="tl-detail"><strong>Evening tapas — see Food &amp; Bars → Córdoba</strong></div></div>
+</div></div>
+<div class="day-panel" id="day-4">
+<div class="city-banner"><span>🚆</span><span class="city-banner-text">CÓRDOBA → GRANADA</span></div>
+<div class="photo-strip n4"><div class="ps-cell"><img class="ps-img" data-key="slide_patio" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="slide_cordoba_st" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="train_interior" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="rio_darro" alt=""></div></div><div class="day-hdr"><div><div class="day-title">Day 4 · Tuesday 7 April</div><div class="day-sub">Córdoba to Granada</div></div><div class="day-badge">Córdoba / Granada</div></div>
+<div class="timeline">
+<div class="tl-row"><div class="tl-time">09:00</div><div class="tl-detail"><strong>Breakfast in apartment or local café</strong></div></div>
+<div class="tl-row even"><div class="tl-time">11:00</div><div class="tl-detail"><strong>Check out of Córdoba apartment</strong></div></div>
+<div class="tl-row"><div class="tl-time">~11:30</div><div class="tl-detail"><strong>Morning free — Palacio de Viana or Plaza de la Corredera</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Palacio%20de%20Viana%20Cordoba&amp;query_place_id=ChIJkd9PYHnfbA0RWDhscTT656U">📍 Palacio de Viana Cordoba</a></div></div>
+<div class="tl-row even"><div class="tl-time">~12:30</div><div class="tl-detail"><strong>Head to Córdoba station</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Cordoba%20Julio%20Anguita%20Station&amp;query_place_id=ChIJQ89oxl3fbA0R64vDbr3xVx8">📍 Cordoba Julio Anguita Station</a></div></div>
+<div class="tl-row"><div class="tl-time">13:06</div><div class="tl-detail"><strong>Train 08335 departs — Passports as ID</strong><br><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div></div>
+<div class="tl-row even"><div class="tl-time">14:51</div><div class="tl-detail"><strong>Arrive Granada station</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Granada%20Train%20Station&amp;query_place_id=ChIJUb-Hh-78cQ0RMQxAdMwJE1s">📍 Granada Train Station</a></div></div>
+<div class="tl-row"><div class="tl-time">~15:30</div><div class="tl-detail"><strong>Check in to Bibo Suites — C. San Matías 20</strong><div class="tl-note">Entry code sent on the day. Black keypad at building entrance: code + #. Then code + # on apartment door. Reception at C. San Matías 20 (10am–9pm) or Plaza Nueva 2 (9am–10pm).</div><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Bibo%20Suites%20Palacio%20de%20Portago%20Granada&amp;query_place_id=ChIJj2C6QkD9cQ0RvmQ_RVaYMJo">📍 Bibo Suites Palacio de Portago Granada</a><div class="tl-note">Available from 15:00</div></div></div>
+<div class="tl-row even"><div class="tl-time">~18:30</div><div class="tl-detail"><strong>Albaicín — Mirador de San Nicolás at dusk</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Mirador%20de%20San%20Nicolas%20Granada&amp;query_place_id=ChIJlc_oycf8cQ0RmGSbIT5svlk">📍 Mirador de San Nicolas Granada</a><div class="tl-note">Unmissable on arrival evening!</div></div></div>
+<div class="tl-row"><div class="tl-time">~20:00</div><div class="tl-detail"><strong>First Granada tapas crawl! Free tapa with every drink!</strong></div></div>
+</div></div>
+<div class="day-panel" id="day-5">
+<div class="city-banner"><span>🎸</span><span class="city-banner-text">GRANADA — FREE DAY + FLAMENCO</span></div>
+<div class="photo-strip n4"><div class="ps-cell"><img class="ps-img" data-key="slide_albaic" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="flamenco" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="slide_mirador" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="sacromonte" alt=""></div></div><div class="day-hdr"><div><div class="day-title">Day 5 · Wednesday 8 April</div><div class="day-sub">Granada Free Day + Flamenco Evening</div></div><div class="day-badge">Granada</div></div>
+<div class="timeline">
+<div class="tl-row"><div class="tl-time">Morning</div><div class="tl-detail"><strong>Options: Parque de las Ciencias, Sacromonte, Sierra Nevada day trip</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Parque%20de%20las%20Ciencias%20Granada&amp;query_place_id=ChIJY1N6W578cQ0RlUdw_5yVKic">📍 Parque de las Ciencias Granada</a></div></div>
+<div class="tl-row even"><div class="tl-time">~13:00</div><div class="tl-detail"><strong>Lunch — Granada tapas (free with every drink!)</strong></div></div>
+<div class="tl-row"><div class="tl-time">17:30</div><div class="tl-detail"><strong>Arrive Jardines de Zoraya — C. Panaderos 32</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Jardines%20de%20Zoraya%20Granada&amp;query_place_id=ChIJDwDEIMb8cQ0RJYYHQgSGKVA">📍 Jardines de Zoraya Granada</a><div class="tl-note">Steep Albaicín streets — allow extra time</div></div></div>
+<div class="tl-row even"><div class="tl-time">18:00–19:00</div><div class="tl-detail"><strong>🎸 Flamenco Show</strong><br><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a><div class="tl-note">BOOKED Ref 95798502. Arrive 17:30 for seating.</div></div></div>
+<div class="tl-row"><div class="tl-time">~19:15</div><div class="tl-detail"><strong>Stroll back down through Albaicín</strong></div></div>
+<div class="tl-row even"><div class="tl-time">~20:30</div><div class="tl-detail"><strong>Dinner — see Food &amp; Bars → Granada</strong></div></div>
+</div></div>
+<div class="day-panel" id="day-6">
+<div class="city-banner"><span>🏰</span><span class="city-banner-text">GRANADA — FREE DAY</span></div>
+<div class="photo-strip n4"><div class="ps-cell"><img class="ps-img" data-key="slide_granada_st" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="granada_ext" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="bib_rambla" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="capilla_real" alt=""></div></div><div class="day-hdr"><div><div class="day-title">Day 6 · Thursday 9 April</div><div class="day-sub">Granada Free Day — Rest Before the Alhambra</div></div><div class="day-badge">Granada</div></div>
+<div class="timeline">
+<div class="tl-row"><div class="tl-time">Morning</div><div class="tl-detail"><strong>Rest day before the Alhambra. Relaxed start.</strong></div></div>
+<div class="tl-row even"><div class="tl-time">~11:00</div><div class="tl-detail"><strong>Royal Chapel (Capilla Real) &amp; Cathedral</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Capilla%20Real%20Royal%20Chapel%20Granada&amp;query_place_id=ChIJJT_b_778cQ0RmwUjKxl7yWM">📍 Capilla Real Royal Chapel Granada</a><div class="tl-note">Compact but unmissable</div></div></div>
+<div class="tl-row"><div class="tl-time">~13:00</div><div class="tl-detail"><strong>Long leisurely lunch — Los Manueles or Chikito</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Los%20Manueles%20Restaurant%20Granada&amp;query_place_id=ChIJ-TyL8778cQ0RGwyNKqccDOA">📍 Los Manueles Restaurant Granada</a></div></div>
+<div class="tl-row even"><div class="tl-time">~15:30</div><div class="tl-detail"><strong>Bib-Rambla square, Alcaicería market, Los Italianos ice cream</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Bib-Rambla%20Square%20Granada&amp;query_place_id=ChIJxQB4T778cQ0R0gvU7kKtSjU">📍 Bib-Rambla Square Granada</a></div></div>
+<div class="tl-row"><div class="tl-time">~19:00</div><div class="tl-detail"><strong>Tapas crawl — Bodegas Castañeda, Los Diamantes, La Sitarilla</strong></div></div>
+</div></div>
+<div class="day-panel" id="day-7">
+<div class="city-banner"><span>⭐</span><span class="city-banner-text">THE ALHAMBRA</span></div>
+<div class="photo-strip n4"><div class="ps-cell"><img class="ps-img" data-key="granada_pal" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="alcazaba" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="generalife" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="patio_arrayanes" alt=""></div></div><div class="day-hdr"><div><div class="day-title">Day 7 · Friday 10 April</div><div class="day-sub">⭐ The Alhambra</div></div><div class="day-badge">Granada</div></div>
+<div class="alert alert-warn"><span class="alert-icon">🛂</span><div><strong>PASSPORTS REQUIRED FOR ALHAMBRA ENTRY</strong> — one per person including children. No exceptions.</div></div>
+<div class="timeline">
+<div class="tl-row"><div class="tl-time">~12:30</div><div class="tl-detail"><strong>Relaxed morning — good breakfast, long afternoon ahead</strong></div></div>
+<div class="tl-row even"><div class="tl-time">~13:00–13:30</div><div class="tl-detail"><strong>Arrive Alhambra main entrance</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Alhambra%20Main%20Entrance%20Granada&amp;query_place_id=ChIJO7l_l7f8cQ0Rf6IhEu_RjYA">📍 Alhambra Main Entrance Granada</a><div class="tl-note">Walk up (steep) or minibus from Plaza Nueva</div></div></div>
+<div class="tl-row"><div class="tl-time">13:30–15:30</div><div class="tl-detail"><strong>Alcazaba — fortress towers with panoramic city views</strong></div></div>
+<div class="tl-row even"><div class="tl-time">15:30–16:30</div><div class="tl-detail"><strong>Partal Palace &amp; terraced gardens</strong></div></div>
+<div class="tl-row"><div class="tl-time">16:30–17:00</div><div class="tl-detail"><strong>Break at on-site café before Nasrid timed entry</strong></div></div>
+<div class="tl-row even"><div class="tl-time">17:30–19:00</div><div class="tl-detail"><strong>⭐ Nasrid Palaces — TIMED ENTRY</strong><br><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a><div class="tl-note">Ref H0LXLYO/1. DO NOT be late — strictly by time slot.</div></div></div>
+<div class="tl-row"><div class="tl-time">19:00–19:30</div><div class="tl-detail"><strong>Generalife gardens (if energy allows)</strong></div></div>
+<div class="tl-row even"><div class="tl-time">~20:30</div><div class="tl-detail"><strong>🥂 Farewell dinner — Bodegas Castañeda</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Bodegas%20Castaneda%20Granada&amp;query_place_id=ChIJLTqlF7_8cQ0RHosavBRI48Q">📍 Bodegas Castaneda Granada</a><div class="tl-note">C. Almireceros 1-3. No booking needed.</div></div></div>
+</div></div>
+<div class="day-panel" id="day-8">
+<div class="city-banner"><span>🏠</span><span class="city-banner-text">GRANADA → HOME</span></div>
+<div class="photo-strip n4"><div class="ps-cell"><img class="ps-img" data-key="train_commuter" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="slide_airport" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="plane_window" alt=""></div><div class="ps-cell"><img class="ps-img" data-key="tapas" alt=""></div></div><div class="day-hdr"><div><div class="day-title">Day 8 · Saturday 11 April</div><div class="day-sub">Granada → Málaga Airport → Home</div></div><div class="day-badge">Travel</div></div>
+<div class="alert alert-warn"><span class="alert-icon">⏰</span><div><strong>Early start!</strong> Train departs 07:36 sharp. Set two alarms the night before.</div></div>
+<div class="timeline">
+<div class="tl-row"><div class="tl-time">06:00</div><div class="tl-detail"><strong>Up early — breakfast from apartment kitchen</strong></div></div>
+<div class="tl-row even"><div class="tl-time">07:00</div><div class="tl-detail"><strong>Uber/taxi to Granada station</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Granada%20Train%20Station&amp;query_place_id=ChIJUb-Hh-78cQ0RMQxAdMwJE1s">📍 Granada Train Station</a><div class="tl-note">~5–10 min</div></div></div>
+<div class="tl-row"><div class="tl-time">07:36</div><div class="tl-detail"><strong>Train 08915 departs Granada — Passports as ID</strong><br><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div></div>
+<div class="tl-row even"><div class="tl-time">09:00</div><div class="tl-detail"><strong>Arrive Málaga María Zambrano</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Malaga%20Maria%20Zambrano%20Station&amp;query_place_id=ChIJ8VDThZX3cg0RWLKm3wEwI-o">📍 Malaga Maria Zambrano Station</a></div></div>
+<div class="tl-row"><div class="tl-time">~09:05</div><div class="tl-detail"><strong>C1 commuter train → Airport</strong><div class="tl-note">Every 20 mins, ~12 min.</div></div></div>
+<div class="tl-row even"><div class="tl-time">~09:17</div><div class="tl-detail"><strong>Arrive Málaga Airport</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Malaga%20Airport%20Train%20Station&amp;query_place_id=ChIJpTC6dhj6cg0Rmj7eRy-ttVc">📍 Malaga Airport Train Station</a></div></div>
+<div class="tl-row"><div class="tl-time">~09:30</div><div class="tl-detail"><strong>Check in / security / departure hall</strong><div class="tl-note">FR6648 departs 13:55. Plenty of time!</div></div></div>
+<div class="tl-row even"><div class="tl-time">13:55</div><div class="tl-detail"><strong>Fly FR6648 → Luton</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Malaga%20Airport%20Departures%20Terminal&amp;query_place_id=ChIJpTC6dhj6cg0Rmj7eRy-ttVc">📍 Malaga Airport Departures Terminal</a><br><a class="wlink wallet-link" href="shoebox://">📲 Wallet</a></div></div>
+<div class="tl-row"><div class="tl-time">15:45</div><div class="tl-detail"><strong>🏠 Land Luton. Welcome home!</strong><br><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Luton%20Airport%20Arrivals&amp;query_place_id=ChIJ1Qb35NA3dkgR0BrZSvPnBi4">📍 Luton Airport Arrivals</a></div></div>
+</div></div>
+</section>
+<section class="section" id="sec-food">
+  <div class="sec-header">
+    <div class="sec-title">Food &amp; Bars</div><div class="sec-bar"></div>
+    <div class="sec-sub">The best places to eat and drink in each city</div>
+  </div>
+<div class="alert alert-info"><span class="alert-icon">ℹ️</span><div><strong>Maps &amp; Websites:</strong> Tap 📍 to open in Google Maps. Tap 🌐 for menus and websites.</div></div>
+  <div class="city-toggle">
+    <button class="city-btn active" onclick="showCity('malaga',this)">✈️ Málaga</button>
+    <button class="city-btn" onclick="showCity('cordoba',this)">🕌 Córdoba</button>
+    <button class="city-btn" onclick="showCity('granada',this)">🏰 Granada</button>
+  </div>
+  <div class="city-food active" id="food-malaga">
+    <div class="map-sect"><div class="map-label">Málaga — Key Locations</div><div class="pin-grid"><div class="pin-card"><div class="pin-icon">🏨</div><div class="pin-body"><div class="pin-name">B&B Hotel Málaga Centro</div><div class="pin-desc">Night 1 · Av. de Fátima 7-9</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJGb-8q_b3cg0R8HLBQPOzFcg">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">⛪</div><div class="pin-body"><div class="pin-name">Málaga Cathedral</div><div class="pin-desc">Free entry 08:30–09:30</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJjanOEZX3cg0R-hlvsHnCw_w">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">☕</div><div class="pin-body"><div class="pin-name">Next Level Specialty Coffee</div><div class="pin-desc">Opens 08:00 · C. Panaderos 14</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ3w9CMlv3cg0RcAxVa6fnljY">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">☕</div><div class="pin-body"><div class="pin-name">The Lab by Next Level</div><div class="pin-desc">Opens 09:00 · C. Duende 6</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJQaRvB673cg0R9pE3TFZRS4s">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🍳</div><div class="pin-body"><div class="pin-name">Mi Cafecito Brunch &amp; Bistro</div><div class="pin-desc">Opens 09:00 · C. Beatas 36</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ_fZIQwH3cg0R_wQ2fTJG8Ic">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🍷</div><div class="pin-body"><div class="pin-name">La Tasquita de en Medio</div><div class="pin-desc">Dinner · C. Calderería 11</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ14_eZ8b3cg0RMEqyWUtn4wo">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🥘</div><div class="pin-body"><div class="pin-name">Los Marangós Molina Lario</div><div class="pin-desc">Seafood · C. Molina Lario 4</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ34aP_yj3cg0RoJNHQKQDVG8">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🍢</div><div class="pin-body"><div class="pin-name">Casa Lola</div><div class="pin-desc">Pintxos · C. Granada 46</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJsUiA5L_3cg0RhcGgclosSyc">📍 Maps</a></div></div></div></div></div>
+    <div class="subhead">Saturday Night Dinner (~22:00)</div><div class="rlist">
+<div class="rcard"><div class="rcard-name">La Tasquita de en Medio</div><div class="rcard-addr">C. Calderería 11</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.7</span><span class="tag tag-hrs">🕐 Open until 1am</span></div><div class="rcard-desc">Excellent tapas and sharing plates. Great for a late arrival dinner.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ14_eZ8b3cg0RMEqyWUtn4wo">📍 Maps</a></div></div>
+<div class="rcard"><div class="rcard-name">Los Marangós Molina Lario</div><div class="rcard-addr">C. Molina Lario 4</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.8</span><span class="tag tag-hrs">🕐 Open until midnight</span></div><div class="rcard-desc">Seafood and paella specialists. One of Málaga's best.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ34aP_yj3cg0RoJNHQKQDVG8">📍 Maps</a></div></div>
+<div class="rcard"><div class="rcard-name">Casa Lola</div><div class="rcard-addr">C. Granada 46</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.3</span><span class="tag tag-hrs">🕐 Open until 11:30pm</span></div><div class="rcard-desc">Pintxos and tapas bar. Lively atmosphere, great value.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJsUiA5L_3cg0RhcGgclosSyc">📍 Maps</a></div></div>
+    </div><div class="subhead">Sunday Breakfast</div><div class="rlist">
+<div class="rcard"><div class="rcard-name">Next Level Specialty Coffee</div><div class="rcard-addr">C. Panaderos 14</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.8</span><span class="tag tag-hrs">🕐 Opens 08:00</span></div><div class="rcard-desc">Best specialty coffee in Málaga.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ3w9CMlv3cg0RcAxVa6fnljY">📍 Maps</a></div></div>
+<div class="rcard"><div class="rcard-name">The Lab by Next Level</div><div class="rcard-addr">C. Duende 6</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.9</span><span class="tag tag-hrs">🕐 Opens 09:00</span></div><div class="rcard-desc">Sister café with excellent brunch menu.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJQaRvB673cg0R9pE3TFZRS4s">📍 Maps</a></div></div>
+<div class="rcard"><div class="rcard-name">Mi Cafecito Brunch &amp; Bistro</div><div class="rcard-addr">C. Beatas 36</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.7</span><span class="tag tag-hrs">🕐 Opens 09:00</span></div><div class="rcard-desc">Relaxed brunch, great for families.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ_fZIQwH3cg0R_wQ2fTJG8Ic">📍 Maps</a></div></div>
+    </div>
+  </div>
+  <div class="city-food" id="food-cordoba">
+<div class="alert alert-warn"><span class="alert-icon">ℹ️</span><div><strong>Tapas are NOT free in Córdoba</strong> — they are paid. Order a drink and choose from the tapas menu.</div></div>
+    <div class="map-sect"><div class="map-label">Córdoba — Key Locations</div><div class="pin-grid"><div class="pin-card"><div class="pin-icon">🕌</div><div class="pin-body"><div class="pin-name">Mezquita-Catedral</div><div class="pin-desc">BOOKED Ref 95794322 · Arrive 09:45</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJzxYazoIgbQ0RNvYb-FPD6-8">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🏠</div><div class="pin-body"><div class="pin-name">The Balcony of the Mosque</div><div class="pin-desc">Airbnb · Plaza de Santa Catalina</div><div class="pin-links"><a class="mlink" href="comgooglemaps://?q=37.8792,-4.7791&amp;zoom=17">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🌸</div><div class="pin-body"><div class="pin-name">Calleja de las Flores</div><div class="pin-desc">Famous flower alley — photo stop!</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJuUyVSp0gbQ0RtNbGE6EKA60">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🌉</div><div class="pin-body"><div class="pin-name">Roman Bridge</div><div class="pin-desc">Torre de la Calahorra end</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJZRKDoZwgbQ0RcdJtzzN6cNY">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🍷</div><div class="pin-body"><div class="pin-name">Bodegas Mezquita Céspedes</div><div class="pin-desc">4.8★ tapas · C. Céspedes</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ8WLVNp0gbQ0RS5VDKpTpi6Q">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🍽️</div><div class="pin-body"><div class="pin-name">Casa Pepe de la Judería</div><div class="pin-desc">4.5★ rooftop Mezquita views</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJMVH5EJ0gbQ0RrVI35HUAgko">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🍽️</div><div class="pin-body"><div class="pin-name">El Rincón de Carmen</div><div class="pin-desc">4.7★ family-friendly</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJiaSlEZ0gbQ0RWk9d7v9ruTA">📍 Maps</a></div></div></div></div></div>
+    <div class="subhead">Bars</div><div class="rlist">
+<div class="rcard"><div class="rcard-name">Taberna El Abanico Mezquita</div><div class="rcard-addr">Near Plaza de Santa Catalina</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.4</span><span class="tag tag-walk">🚶 ~2 min</span></div><div class="rcard-desc">Classic Córdoba tavern atmosphere.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJfZG7NZ0gbQ0RHLzFRXDSKmU">📍 Maps</a></div></div>
+<div class="rcard"><div class="rcard-name">La Esquinita de la Judería</div><div class="rcard-addr">Near Plaza de Santa Catalina</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.4</span><span class="tag tag-walk">🚶 ~3 min</span></div><div class="rcard-desc">Cosy corner bar. Great local vibe.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJtTyFRZ0gbQ0RD6TWSeyAAbc">📍 Maps</a></div></div>
+    </div><div class="subhead">Tapas Bars</div><div class="rlist">
+<div class="rcard"><div class="rcard-name">Bodegas Mezquita Céspedes</div><div class="rcard-addr">C. Céspedes</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.8</span><span class="tag tag-walk">🚶 ~2 min</span></div><div class="rcard-desc">World-class tapas. Book ahead.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ8WLVNp0gbQ0RS5VDKpTpi6Q">📍 Maps</a><a class="wlink" href="https://www.bodegasmezquita.com/en/cespedes/" target="_blank">🌐 Website</a></div></div>
+<div class="rcard"><div class="rcard-name">La Esquinita El Patio</div><div class="rcard-addr">Near Mezquita</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.7</span><span class="tag tag-walk">🚶 ~2 min</span></div><div class="rcard-desc">Great tapas in a courtyard setting.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJfZG7NZ0gbQ0RHLzFRXDSKmU">📍 Maps</a></div></div>
+<div class="rcard"><div class="rcard-name">Las Tapas de Casa Pepe</div><div class="rcard-addr">C. Romero 1</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.6</span><span class="tag tag-hrs">🕐 Closed Wed &amp; Thu</span><span class="tag tag-walk">🚶 ~3 min</span></div><div class="rcard-desc">Good tapas selection.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJo8Tlo90hbQ0RhQlh0p4sxts">📍 Maps</a><a class="wlink" href="https://restaurantecasapepedelajuderia.com/" target="_blank">🌐 Website</a></div></div>
+    </div><div class="subhead">Restaurants</div><div class="rlist">
+<div class="rcard"><div class="rcard-name">El Rincón de Carmen</div><div class="rcard-addr">C. Romero 4</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.7</span></div><div class="rcard-desc">Family-friendly. Traditional Córdoban cuisine.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJiaSlEZ0gbQ0RWk9d7v9ruTA">📍 Maps</a></div></div>
+<div class="rcard"><div class="rcard-name">Casa Pepe de la Judería</div><div class="rcard-addr">C. Romero 1</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.5</span></div><div class="rcard-desc">Historic tavern since 1928. Rooftop Mezquita views!</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJMVH5EJ0gbQ0RrVI35HUAgko">📍 Maps</a><a class="wlink" href="https://restaurantecasapepedelajuderia.com/" target="_blank">🌐 Website</a></div></div>
+<div class="rcard"><div class="rcard-name">El Horno de Mel</div><div class="rcard-addr">C. Romero</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.7</span><span class="tag tag-hrs">🕐 Breakfast &amp; lunch only · Closed Sun</span></div><div class="rcard-desc">Excellent daytime option.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ4VXbmKYgbQ0ROOze5eEwSos">📍 Maps</a></div></div>
+    </div>
+  </div>
+  <div class="city-food" id="food-granada">
+<div class="alert alert-green"><span class="alert-icon">🍺</span><div><strong>Granada free tapas:</strong> Every drink comes with a FREE tapa. Order cañas for more rounds and more variety!</div></div>
+    <div class="map-sect"><div class="map-label">Granada — Key Locations</div><div class="pin-grid"><div class="pin-card"><div class="pin-icon">🏠</div><div class="pin-body"><div class="pin-name">Bibo Suites Palacio de Pórtago</div><div class="pin-desc">Home for 4 nights · C. San Matías 20</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJj2C6QkD9cQ0RvmQ_RVaYMJo">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">⭐</div><div class="pin-body"><div class="pin-name">Alhambra Main Entrance</div><div class="pin-desc">BOOKED · Nasrid Palaces 17:30</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJO7l_l7f8cQ0Rf6IhEu_RjYA">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🎸</div><div class="pin-body"><div class="pin-name">Jardines de Zoraya</div><div class="pin-desc">BOOKED Flamenco 18:00 · C. Panaderos 32</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJDwDEIMb8cQ0RJYYHQgSGKVA">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🌅</div><div class="pin-body"><div class="pin-name">Mirador de San Nicolás</div><div class="pin-desc">Best Alhambra view at dusk</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJlc_oycf8cQ0RmGSbIT5svlk">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🍷</div><div class="pin-body"><div class="pin-name">Bodegas Castañeda</div><div class="pin-desc">Farewell dinner ⭐ · C. Almireceros</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJLTqlF7_8cQ0RHosavBRI48Q">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🍢</div><div class="pin-body"><div class="pin-name">Bar Los Diamantes</div><div class="pin-desc">4.3★ free seafood tapas · C. Navas</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ45mdhb78cQ0R3qfxRyTkzgI">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🍺</div><div class="pin-body"><div class="pin-name">La Auténtica Carmela</div><div class="pin-desc">4.4★ free tapas · ~2 min</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJV_Vp0778cQ0RA_d_zWlRtC0">📍 Maps</a></div></div></div><div class="pin-card"><div class="pin-icon">🍽️</div><div class="pin-body"><div class="pin-name">Perromedio</div><div class="pin-desc">4.8★ · C. San Matías area</div><div class="pin-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJU-z22eH9cQ0R8YsQHmxnvik">📍 Maps</a></div></div></div></div></div>
+    <div class="subhead">Free Tapas Bars (near Bibo Suites)</div><div class="rlist">
+<div class="rcard"><div class="rcard-name">La Auténtica Carmela</div><div class="rcard-addr">Near C. San Matías</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.4</span><span class="tag tag-free">🍺 Free tapas</span><span class="tag tag-walk">🚶 ~2 min</span></div><div class="rcard-desc">Great central location. Reliable free tapas.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJV_Vp0778cQ0RA_d_zWlRtC0">📍 Maps</a></div></div>
+<div class="rcard"><div class="rcard-name">Bar Los Diamantes</div><div class="rcard-addr">C. Navas</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.3</span><span class="tag tag-free">🍺 Free tapas</span><span class="tag tag-walk">🚶 ~4 min</span></div><div class="rcard-desc">Famous for generous free seafood tapas.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ45mdhb78cQ0R3qfxRyTkzgI">📍 Maps</a></div></div>
+<div class="rcard"><div class="rcard-name">Bodegas Castañeda ⭐</div><div class="rcard-addr">C. Almireceros 1-3</div><div class="rcard-meta"><span class="tag tag-hrs">🕐 Walk in — no booking</span><span class="tag tag-free">🍺 Free tapas</span><span class="tag tag-walk">🚶 ~4 min</span></div><div class="rcard-desc">Classic Granada bodega since 1927. Farewell dinner.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJLTqlF7_8cQ0RHosavBRI48Q">📍 Maps</a><a class="wlink" href="https://casacastaneda.es/" target="_blank">🌐 Website</a></div></div>
+<div class="rcard"><div class="rcard-name">Los Manueles</div><div class="rcard-addr">C. Reyes Católicos 61</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.3</span><span class="tag tag-hrs">🕐 Noon–midnight daily</span><span class="tag tag-free">🍺 Free tapas</span><span class="tag tag-walk">🚶 ~4 min</span></div><div class="rcard-desc">Traditional Granadino restaurant since 1917.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ-TyL8778cQ0RGwyNKqccDOA">📍 Maps</a><a class="wlink" href="https://www.losmanueles.es/" target="_blank">🌐 Website</a></div></div>
+<div class="rcard"><div class="rcard-name">La Sitarilla</div><div class="rcard-addr">Granada city centre</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.6</span><span class="tag tag-free">🍺 Free tapas</span><span class="tag tag-walk">🚶 ~10 min</span></div><div class="rcard-desc">Excellent tapas in a quieter setting.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJg1PN0JX8cQ0Rg_Eb1NU1dOo">📍 Maps</a></div></div>
+<div class="rcard"><div class="rcard-name">Bar Poë</div><div class="rcard-addr">Granada city centre</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.7</span><span class="tag tag-hrs">🕐 Wed–Sun from 8pm</span><span class="tag tag-free">🍺 Free tapas</span><span class="tag tag-walk">🚶 ~10 min</span></div><div class="rcard-desc">Brilliant neighbourhood bar.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ8Xj-t5X8cQ0RLUIIL9m1lOs">📍 Maps</a></div></div>
+    </div><div class="subhead">Tapas Bars / Restaurants</div><div class="rlist">
+<div class="rcard"><div class="rcard-name">La Botillería</div><div class="rcard-addr">Near C. San Matías</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.5</span><span class="tag tag-walk">🚶 ~2 min</span></div><div class="rcard-desc">Excellent wines and creative tapas.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJA0E7_7v8cQ0Rl6IuIXGoCTQ">📍 Maps</a></div></div>
+<div class="rcard"><div class="rcard-name">Perromedio</div><div class="rcard-addr">Near C. San Matías</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.8</span><span class="tag tag-walk">🚶 ~3 min</span></div><div class="rcard-desc">Highly rated. Arrive early or book ahead.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJU-z22eH9cQ0R8YsQHmxnvik">📍 Maps</a></div></div>
+<div class="rcard"><div class="rcard-name">Chikito</div><div class="rcard-addr">Plaza del Campillo 9</div><div class="rcard-meta"><span class="tag tag-rat">⭐ 4.1</span><span class="tag tag-hrs">🕐 Closed Wed</span><span class="tag tag-walk">🚶 ~3 min</span></div><div class="rcard-desc">Classic Granada restaurant in a historic setting.</div><div class="rcard-links"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJd86cbbz8cQ0RxYfDAEyN4zM">📍 Maps</a></div></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="sec-tips">
+  <div class="sec-header">
+    <div class="sec-title">Practical Tips</div><div class="sec-bar"></div>
+    <div class="sec-sub">Everything to help the holiday run smoothly</div>
+  </div>
+  <div class="tips-grid">
+<div class="tcard" style="border-left:4px solid var(--deep)">
+  <div class="tcard-icon">🇬🇧</div>
+  <div class="tcard-title">UK &amp; EU Free Entry</div>
+  <div class="tcard-text">Since Brexit, UK citizens are <strong>no longer EU citizens</strong> and do not qualify for EU free entry at Spanish museums. Where entry is listed as "free for EU citizens", UK visitors pay the standard non-EU fee (typically €1.50–€1.50). Always carry your passport to show at ticket desks.</div>
+</div>
+<div class="tcard"><div class="tcard-icon">🛂</div><div class="tcard-title">Passports</div><div class="tcard-text">Required for Alhambra entry AND as ID on all Renfe trains. Carry every day.</div></div>
+<div class="tcard"><div class="tcard-icon">✈️</div><div class="tcard-title">Return transfer</div><div class="tcard-text">C1 commuter train from María Zambrano to airport. Every 20 mins, ~12 min. Board ~09:05.</div></div>
+<div class="tcard"><div class="tcard-icon">🏨</div><div class="tcard-title">Airbnb check-in</div><div class="tcard-text">Check Airbnb app on Friday 3 April — Córdoba host sends the entry code 48 hours ahead.</div></div>
+<div class="tcard"><div class="tcard-icon">💶</div><div class="tcard-title">Cash</div><div class="tcard-text">Carry some euros. Smaller tapas bars may not take cards.</div></div>
+<div class="tcard"><div class="tcard-icon">📱</div><div class="tcard-title">Maps</div><div class="tcard-text">All 📍 links open Google Maps. Download offline maps for all three cities before you go.</div></div>
+<div class="tcard"><div class="tcard-icon">🚕</div><div class="tcard-title">Uber</div><div class="tcard-text">Works reliably in all three cities. Pre-load destination before landing.</div></div>
+<div class="tcard"><div class="tcard-icon">🍺</div><div class="tcard-title">Tapas trick (Granada)</div><div class="tcard-text">Order a caña (small beer) — more rounds means more free tapas variety.</div></div>
+<div class="tcard"><div class="tcard-icon">🌡️</div><div class="tcard-title">Alhambra altitude</div><div class="tcard-text">~740m above sea level — noticeably cooler. Bring a layer for the 17:30 Nasrid entry.</div></div>
+<div class="tcard"><div class="tcard-icon">🕌</div><div class="tcard-title">Mezquita dress code</div><div class="tcard-text">Shoulders and knees covered for entry. Bring a shawl or light layer.</div></div>
+<div class="tcard"><div class="tcard-icon">⛪</div><div class="tcard-title">Semana Santa</div><div class="tcard-text">Holy Week ~2–6 April. Beautiful but streets get crowded. Allow extra time.</div></div>
+<div class="tcard"><div class="tcard-icon">📸</div><div class="tcard-title">Alhambra photos</div><div class="tcard-text">Photography allowed throughout including Nasrid Palaces. Don't miss the Court of Lions.</div></div>
+<div class="tcard"><div class="tcard-icon">🎸</div><div class="tcard-title">Flamenco (Wed 8 Apr)</div><div class="tcard-text">Jardines de Zoraya, C. Panaderos 32. Arrive 17:30. Albaicín streets are steep.</div></div>
+<div class="tcard"><div class="tcard-icon">🎒</div><div class="tcard-title">Alhambra essentials</div><div class="tcard-text">Bring water and snacks. On-site café perfect for a break before Nasrid entry.</div></div>
+<div class="tcard"><div class="tcard-icon">🌅</div><div class="tcard-title">Best view</div><div class="tcard-text">Mirador de San Nicolás at dusk — do it Tuesday evening on arrival in Granada.</div></div>
+<div class="tcard"><div class="tcard-icon">📞</div><div class="tcard-title">Emergency</div><div class="tcard-text">Spain: 112. UK Foreign Office: +44 207 008 5000.</div></div>
+  </div>
+</section>
+
+<section class="section" id="sec-places">
+  <div class="sec-header">
+    <div class="sec-title">Suggested Places to Visit</div><div class="sec-bar"></div>
+    <div class="sec-sub">Family-friendly attractions, gardens and culture for all ages</div>
+  </div>
+  <div class="alert alert-info"><span class="alert-icon">💡</span><div>These suggestions supplement your booked attractions. All 📍 links open directly in Google Maps.</div></div>
+  <div class="city-toggle" style="margin-top:20px">
+    <button class="place-btn active" onclick="showPlaceCity('cordoba',this)">🕌 Córdoba</button>
+    <button class="place-btn" onclick="showPlaceCity('granada',this)">🏰 Granada</button>
+  </div>
+  <div class="place-city active" id="place-cordoba">
+    <div class="alert alert-info"><span class="alert-icon">ℹ️</span><div>You have 1.5 days in Córdoba (evening Sun 5 + full day Mon 6). The Mezquita and Judería are already in your itinerary — these are additional options for remaining time.</div></div>
+    <div class="subhead">History &amp; Culture</div>
+<div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Torre de la Calahorra <span class="pcard-badge badge-culture">Culture</span><span class="pcard-badge badge-kids">Kids</span></div>
+      <div class="pcard-desc">The medieval tower at the southern end of the Roman Bridge houses a brilliant interactive museum covering the three cultures of Córdoba — Islamic, Jewish and Christian. Each visitor gets an audio guide with a children's version. Miniature models and panoramic views from the top make it a hit with all ages.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Daily 10am–6pm (winter), 10am–8pm (summer) &nbsp;·&nbsp; <strong>Price:</strong> ~€5 adults, ~€3 children &nbsp;·&nbsp; <strong>Time needed:</strong> 1–1.5 hrs</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJZRKDoZwgbQ0RcdJtzzN6cNY">📍 Maps</a><a class="wlink" href="https://www.torrecalahorra.es/" target="_blank">🌐 Website</a></div>
+</div><div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Alcázar Gardens <span class="pcard-badge badge-garden">Gardens</span><span class="pcard-badge badge-kids">Kids</span><span class="pcard-badge badge-free">Free</span></div>
+      <div class="pcard-desc">The Alcázar de los Reyes Cristianos interior is currently closed for refurbishment, but the magnificent terraced gardens — with their fountains, fish ponds and colourful flower beds — remain open and free to visit. A great open space for younger children to run around.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Gardens currently free and open &nbsp;·&nbsp; <strong>Time needed:</strong> 45 mins &nbsp;·&nbsp; <strong>Note:</strong> Interior closed for refurbishment (check before visiting)</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ8WLVNp0gbQ0RS5VDKpTpi6Q">📍 Maps</a></div>
+</div><div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Medina Azahara <span class="pcard-badge badge-culture">Culture</span><span class="pcard-badge badge-kids">Kids</span></div>
+      <div class="pcard-desc">A UNESCO World Heritage site just 8km west of Córdoba — the ruins of the 10th-century Caliphate palace city. An excellent visitor centre with engaging exhibits brings the ruins to life. Kids can roam the archaeological site while imagining life in medieval Moorish Spain. Best with a guide.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Tue–Sat 9am–6pm (varies seasonally) &nbsp;·&nbsp; <strong>Price:</strong> ~€1.50 (EU citizens free · <strong>UK: €1.50</strong>) &nbsp;·&nbsp; <strong>Getting there:</strong> Bus or taxi, ~20 mins from city centre &nbsp;·&nbsp; <strong>Time needed:</strong> 2 hrs</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ8S1vgHHYbA0RISmGx8ry2KY">📍 Maps</a><a class="wlink" href="https://www.museosdeandalucia.es/web/conjuntoarqueologicomadinatalzahra" target="_blank">🌐 Website</a></div>
+</div><div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Palacio de Viana <span class="pcard-badge badge-culture">Culture</span><span class="pcard-badge badge-garden">Gardens</span></div>
+      <div class="pcard-desc">A Renaissance palace with twelve stunning patios and courtyards, each more beautiful than the last. The Patio de los Gatos is particularly popular with children. The gardens are lovely and the whole complex is far less crowded than the Mezquita.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Tue–Sun 10am–7pm (shorter in winter) &nbsp;·&nbsp; <strong>Price:</strong> ~€8 adults, ~€4 children &nbsp;·&nbsp; <strong>Time needed:</strong> 1.5 hrs</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJkd9PYHnfbA0RWDhscTT656U">📍 Maps</a><a class="wlink" href="https://palaciodevianamuseocordoba.com/" target="_blank">🌐 Website</a></div>
+</div><div class="subhead">Galleries &amp; Art</div>
+<div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Museum of Fine Arts of Córdoba <span class="pcard-badge badge-culture">Gallery</span><span class="pcard-badge badge-free">Free</span></div>
+      <div class="pcard-desc">A beautifully presented collection of Córdoban and Andalusian art from the 14th to 20th centuries, housed in a gorgeous 16th-century hospital building on the Plaza del Potro. The shaded orange-tree courtyard alone is worth the visit. Best seen alongside the Julio Romero de Torres Museum directly next door.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Tue–Sat 9am–9pm, Sun 9am–3pm | Closed Mon &nbsp;·&nbsp; <strong>Price:</strong> Free &nbsp;·&nbsp; <strong>Time needed:</strong> 45 min–1 hr</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJaS2FG50gbQ0RJoWhOgeJCOQ">📍 Maps</a></div>
+</div>
+<div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Julio Romero de Torres Museum <span class="pcard-badge badge-culture">Gallery</span></div>
+      <div class="pcard-desc">Dedicated entirely to Córdoba's most celebrated painter, famous for his sensual and atmospheric portraits of Andalusian women. The works are vivid, symbolic and unlike anything else — a real discovery if you've not encountered him before. Housed next door to the Fine Arts Museum; the two together make for a perfect morning.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Tue–Fri 8:15am–8:15pm, Sat 9:30am–5:30pm, Sun 8:15am–2:15pm | Closed Mon &nbsp;·&nbsp; <strong>Price:</strong> Small fee (check on arrival) &nbsp;·&nbsp; <strong>Time needed:</strong> 45 min</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJrz-zPUMhbQ0Rd6pZQU4kbYs">📍 Maps</a></div>
+</div>
+<div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">C3A — Contemporary Art Centre of Andalusia <span class="pcard-badge badge-culture">Contemporary Art</span><span class="pcard-badge badge-free">Free</span></div>
+      <div class="pcard-desc">A striking modern building by Nieto Sobejano Arquitectos beside the Roman Bridge, dedicated to large-scale contemporary art installations. Completely free, air-conditioned, and almost always uncrowded — reviewers consistently say it's one of Córdoba's most underrated attractions. Very much a hidden gem.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Tue–Sat 11am–8pm, Sun 11am–3pm | Closed Mon &nbsp;·&nbsp; <strong>Price:</strong> Free &nbsp;·&nbsp; <strong>Time needed:</strong> 1 hr</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJOXEl34YgbQ0R6v7cPZFyIgY">📍 Maps</a></div>
+</div>
+<div class="subhead">Family Activities</div>
+<div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Guadalquivir River Boat Trip <span class="pcard-badge badge-kids">Kids</span></div>
+      <div class="pcard-desc">A gentle 45-minute boat ride along the Guadalquivir River, passing the Roman Bridge and the Mezquita from the water. A relaxing way to see the city from a different angle — particularly good for younger children who need a rest from walking.</div>
+      <div class="pcard-meta"><strong>Duration:</strong> ~45 mins &nbsp;·&nbsp; <strong>Price:</strong> ~€7 adults, ~€3.50 children &nbsp;·&nbsp; <strong>Departure point:</strong> Near the Roman Bridge</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="comgooglemaps://?q=37.8765,-4.7781&amp;zoom=17">📍 Maps</a></div>
+</div><div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Córdoba Zoo <span class="pcard-badge badge-kids">Kids</span></div>
+      <div class="pcard-desc">A well-maintained zoo in a lush park setting, home to lions, bears, zebras, giraffes and more. Plenty of shade and wide paths make it easy going with younger children. Located about 20 minutes' walk or a short taxi from the centre.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Daily 10am–7pm (summer), 10am–6pm (winter) &nbsp;·&nbsp; <strong>Price:</strong> ~€6 adults, ~€3 children &nbsp;·&nbsp; <strong>Time needed:</strong> 2–3 hrs</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ-5LkJJogbQ0RDadp1_IJvIs">📍 Maps</a><a class="wlink" href="https://www.zoocordoba.com/" target="_blank">🌐 Website</a></div>
+</div><div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Archaeological Museum of Córdoba <span class="pcard-badge badge-culture">Culture</span><span class="pcard-badge badge-free">Free for EU</span></div>
+      <div class="pcard-desc">A compact but excellent museum set in and around a 16th-century palace. Highlights include Roman mosaics, ancient artifacts and a Roman amphitheatre in the basement. The courtyard of the adjoining palace is included with entry. Great value — and free for EU citizens (<strong>not UK — pay €1.50</strong>).</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Tue–Sat 9am–8pm, Sun 9am–3pm &nbsp;·&nbsp; <strong>Price:</strong> ~€1.50 (free for EU citizens (<strong>not UK — pay €1.50</strong>)) &nbsp;·&nbsp; <strong>Time needed:</strong> 1–1.5 hrs</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJMzun750gbQ0RSiNkGhTGab0">📍 Maps</a><a class="wlink" href="https://www.museosdeandalucia.es/web/museoarqueologicodecordoba" target="_blank">🌐 Website</a></div>
+</div>
+  </div>
+  <div class="place-city" id="place-granada">
+    <div class="alert alert-info"><span class="alert-icon">ℹ️</span><div>You have 3 free days in Granada (Wed 8, Thu 9, plus the morning of Tue 7). The Alhambra, flamenco show and Capilla Real are already planned — these are additional options.</div></div>
+    <div class="subhead">Must-See with Children</div>
+<div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Parque de las Ciencias (Science Park) <span class="pcard-badge badge-kids">Kids ⭐</span><span class="pcard-badge badge-culture">Interactive</span></div>
+      <div class="pcard-desc">One of the best science museums in Spain — 70,000m² of interactive exhibits spread across multiple pavilions. Includes a planetarium with a 7,000-star show, a butterfly house, a hands-on perception pavilion with giant kaleidoscopes, geology galleries and a biodome. Easily a full half-day with young children. Multiple visitors rate it above science museums in London.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Tue–Sat 10am–7pm, Sun 10am–3pm &nbsp;·&nbsp; <strong>Price:</strong> ~€7 adults, ~€5.50 children &nbsp;·&nbsp; <strong>Getting there:</strong> ~15 min walk south of the city centre &nbsp;·&nbsp; <strong>Time needed:</strong> 3–4 hrs</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJY1N6W578cQ0RlUdw_5yVKic">📍 Maps</a><a class="wlink" href="https://www.parqueciencias.com/en/" target="_blank">🌐 Website</a></div>
+</div><div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Carmen de los Mártires Gardens <span class="pcard-badge badge-garden">Gardens</span><span class="pcard-badge badge-kids">Kids</span><span class="pcard-badge badge-free">Free</span></div>
+      <div class="pcard-desc">A beautiful, quiet garden set on the Alhambra hill, just five minutes' walk from the main Alhambra entrance. Romantic terraced gardens with a pond, a wide variety of plants and trees, and — the children's favourite — freely roaming peacocks. A perfect spot for a break before or after the Alhambra.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Mon–Fri 10am–2pm &amp; 5pm–8pm, Sat–Sun 10am–8pm &nbsp;·&nbsp; <strong>Price:</strong> Free &nbsp;·&nbsp; <strong>Time needed:</strong> 45 mins</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJgTz8RrH8cQ0RPYUwX83I-Mk">📍 Maps</a></div>
+</div><div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Sacromonte Caves &amp; Cave Flamenco <span class="pcard-badge badge-culture">Culture</span><span class="pcard-badge badge-kids">Kids</span></div>
+      <div class="pcard-desc">The Sacromonte neighbourhood, perched above the city, is home to Granada's Roma community and famous for its cave dwellings cut into the hillside. Walk up through the barrio for the cave homes and views, or book a cave flamenco show for an intimate and authentic experience. Several venues offer family-friendly shows — a more atmospheric alternative to a formal theatre performance.</div>
+      <div class="pcard-meta"><strong>Getting there:</strong> Walk from Albaicín (steep) or minibus from Plaza Nueva &nbsp;·&nbsp; <strong>Cave shows:</strong> ~€20–25 per person &nbsp;·&nbsp; <strong>Note:</strong> Evening shows most atmospheric</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJgxFkqcv8cQ0R_rGkeEcQtf0">📍 Maps</a></div>
+</div><div class="subhead">Galleries &amp; Art</div>
+<div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Museo de Bellas Artes de Granada <span class="pcard-badge badge-culture">Gallery</span><span class="pcard-badge badge-free">Free</span></div>
+      <div class="pcard-desc">An excellent free art museum inside the Palace of Charles V, right within the Alhambra complex — so it costs nothing to visit if you're already there. Spanish art from the 15th to 20th centuries, much of it by local Granadan and Andalusian artists. Bright, spacious rooms and an impressively diverse collection.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Tue–Sat 9am–6pm, Sun 9am–3pm | Closed Mon &nbsp;·&nbsp; <strong>Price:</strong> Free &nbsp;·&nbsp; <strong>Location:</strong> Inside the Alhambra complex, Palace of Charles V &nbsp;·&nbsp; <strong>Time needed:</strong> 1 hr</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJY5NBpbf8cQ0Rrf4epNmvb8E">📍 Maps</a></div>
+</div>
+<div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Centro José Guerrero <span class="pcard-badge badge-culture">Contemporary Art</span><span class="pcard-badge badge-free">Free</span></div>
+      <div class="pcard-desc">A sleek contemporary art gallery dedicated to José Guerrero, the Granada-born abstract expressionist who worked alongside Rothko and de Kooning in New York. The building itself is wonderful — a converted Renaissance townhouse in the heart of the city, right beside the Cathedral. Exhibitions change regularly. Completely free and uncrowded.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Tue–Sat 10:30am–2pm &amp; 4:30–9pm, Sun 10:30am–2pm | Closed Mon &nbsp;·&nbsp; <strong>Price:</strong> Free &nbsp;·&nbsp; <strong>Time needed:</strong> 45 min</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJjT3oAb_8cQ0RcfDteXJgxlY">📍 Maps</a><a class="wlink" href="https://www.centroguerrero.es/" target="_blank">🌐 Website</a></div>
+</div>
+<div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">CajaGRANADA Cultural Centre <span class="pcard-badge badge-culture">Museum &amp; Gallery</span><span class="pcard-badge badge-kids">Kids</span></div>
+      <div class="pcard-desc">A spectacular landmark building by Rafael Moneo housing an interactive permanent exhibition on the history and culture of Andalusia, plus a rotating programme of temporary art exhibitions. Reviewers praise it as a world-class interactive museum — particularly good for children. Adjacent to the Parque de las Ciencias, so easy to combine the two.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Check website for current hours &nbsp;·&nbsp; <strong>Price:</strong> ~€5 adults &nbsp;·&nbsp; <strong>Location:</strong> Near Parque de las Ciencias &nbsp;·&nbsp; <strong>Time needed:</strong> 1.5 hrs</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJvyutCpz8cQ0RCEKb6mEw7ww">📍 Maps</a></div>
+</div>
+<div class="subhead">Parks &amp; Gardens</div>
+<div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Parque Federico García Lorca <span class="pcard-badge badge-garden">Gardens</span><span class="pcard-badge badge-kids">Kids</span><span class="pcard-badge badge-free">Free</span></div>
+      <div class="pcard-desc">Granada's largest park, opened on the grounds of the Lorca family's former summer home. A large playground with swings and zip lines, extensive lawns to run on, a small lake with ducks, and shaded garden walks. The poet's house is preserved as a museum within the grounds. Open-air cinema and puppet shows in summer.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Daily from 8am (closing time varies by season) &nbsp;·&nbsp; <strong>Price:</strong> Free &nbsp;·&nbsp; <strong>Getting there:</strong> ~20 min walk south of Bibo Suites, or short taxi &nbsp;·&nbsp; <strong>Time needed:</strong> 1–2 hrs</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ0cmHHpH8cQ0RbpTJjlVri2k">📍 Maps</a></div>
+</div><div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Jardín Botánico de la Universidad de Granada <span class="pcard-badge badge-garden">Gardens</span><span class="pcard-badge badge-free">Free</span></div>
+      <div class="pcard-desc">Granada's university botanical garden, with a fascinating collection of medicinal, ornamental and edible plants. The garden has strong historical connections — Federico García Lorca walked here regularly and found inspiration for his poetry. A quiet, beautiful and often-overlooked gem close to the city centre.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Mon–Fri 10am–2pm &nbsp;·&nbsp; <strong>Price:</strong> Free &nbsp;·&nbsp; <strong>Getting there:</strong> ~10 min walk from Bibo Suites &nbsp;·&nbsp; <strong>Time needed:</strong> 45 mins</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJ6Q7fWpX8cQ0RIWqF0y8GknI">📍 Maps</a></div>
+</div><div class="subhead">Culture &amp; History</div>
+<div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Granada Cathedral <span class="pcard-badge badge-culture">Culture</span><span class="pcard-badge badge-kids">Kids</span></div>
+      <div class="pcard-desc">The first Renaissance cathedral in Spain — built by Queen Isabella on the site of the main mosque after the conquest of Granada in 1492. The sheer scale impresses children even without an interest in architecture. Kids under 12 enter free. Located right in the city centre, next to the Capilla Real.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Mon–Sat 10am–6:15pm, Sun 3pm–6pm &nbsp;·&nbsp; <strong>Price:</strong> €7 adults, free under 12 &nbsp;·&nbsp; <strong>Time needed:</strong> 45 mins</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJqWuDsb_8cQ0RwlE55Uv7_nA">📍 Maps</a><a class="wlink" href="https://catedraldigranada.es/" target="_blank">🌐 Website</a></div>
+</div><div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Carrera del Darro Riverside Walk <span class="pcard-badge badge-free">Free</span><span class="pcard-badge badge-kids">Kids</span></div>
+      <div class="pcard-desc">One of the most beautiful streets in Spain — a cobbled riverside walkway along the Río Darro at the base of the Alhambra hill. Medieval bridges arch over the river, white-washed buildings rise above it, and you can see the Alhambra towers directly overhead. A lovely gentle walk from Plaza Nueva towards the Albaicín. No entrance fee, no queues.</div>
+      <div class="pcard-meta"><strong>Getting there:</strong> Start at Plaza Nueva, ~5 min walk from Bibo Suites &nbsp;·&nbsp; <strong>Best time:</strong> Morning or late afternoon &nbsp;·&nbsp; <strong>Time needed:</strong> 30–45 min walk</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJRQrmvHH9cQ0RD6BbGYn-MSs">📍 Maps</a></div>
+</div><div class="pcard">
+  <div class="pcard-row">
+    <div class="pcard-content">
+      <div class="pcard-name">Alcaicería Silk Market <span class="pcard-badge badge-culture">Culture</span><span class="pcard-badge badge-kids">Kids</span></div>
+      <div class="pcard-desc">A fascinating reconstruction of Granada's original Moorish silk market — a labyrinthine covered bazaar of narrow lanes packed with shops selling ceramics, lanterns, leather goods, jewellery and Alhambra-themed souvenirs. The children will love the sensory overload. A great place to pick up keepsakes. Located directly next to the Cathedral.</div>
+      <div class="pcard-meta"><strong>Hours:</strong> Most shops daily 10am–8pm &nbsp;·&nbsp; <strong>Price:</strong> Free to browse &nbsp;·&nbsp; <strong>Getting there:</strong> ~5 min walk from Bibo Suites</div>
+    </div>
+  </div>
+  <div style="margin-top:8px"><a class="mlink" href="https://www.google.com/maps/search/?api=1&amp;query=Maps&amp;query_place_id=ChIJEyf5qcT9cQ0Rgsy9V1MMjoQ">📍 Maps</a></div>
+</div>
+<div class="tcard" style="grid-column:1/-1;background:linear-gradient(135deg,#FFF3E6,#fff);border-color:#f0c090">
+  <div class="tcard-icon">🍹</div>
+  <div class="tcard-title">Drinks Guide — Andalusia</div>
+  <div class="tcard-text">
+    <strong style="color:var(--deep)">Beer (Cerveza)</strong> — Order a <em>caña</em> (small draft) rather than a pint. In Andalusia the local brew is Cruzcampo. More rounds = more free tapas in Granada!<br><br>
+    <strong style="color:var(--deep)">White wine</strong> — Ask for <em>vino blanco</em>. A chilled glass of local Andalusian white (Verdejo or Chardonnay) works perfectly with seafood tapas.<br><br>
+    <strong style="color:var(--deep)">Gin &amp; tonic</strong> — Hugely popular in Andalusia. The local speciality is <strong>Puerto de Indias</strong> strawberry gin from Seville — pink-coloured, served with strawberries and red fruits. Just ask for "Puerto de Indias gin-tonic".<br><br>
+    <strong style="color:var(--deep)">Sangria</strong> — The classic. More of a tourist order than a local one, but absolutely fine to enjoy. Red wine, fruit and a splash of brandy over ice.<br><br>
+    <strong style="color:var(--deep)">For the kids</strong> — <em>Zumo de naranja natural</em> (freshly squeezed orange juice) is exceptional in Spain. <em>Granizado de limón</em> is a traditional lemon slush that children love. <em>Mosto</em> is freshly pressed grape juice — lighter and less sweet than the UK version (always confirm <em>sin alcohol</em>).<br><br>
+    <a href="https://visitsouthernspain.com/spanish-drinks/" target="_blank" style="color:var(--mid);font-size:12px">🌐 Full guide to Andalusian drinks →</a>
+  </div>
+</div>
+  </div>
+</section>
+
+<section class="section" id="sec-phrases">
+  <div class="sec-header">
+    <div class="sec-title">Spanish Phrase Card</div><div class="sec-bar"></div>
+    <div class="sec-sub">Everything you need to order, ask and get by</div>
+  </div>
+
+  <div class="phrase-cat">🍽️ At the Table</div>
+  <div class="phrase-grid">
+<div class="phr"><div class="phr-en">A table for four, please</div><div class="phr-es">Una mesa para cuatro, por favor</div><div class="phr-ph">OO-na MAY-sa PA-ra KWA-tro, por fa-VOR</div></div>
+
+<div class="phr"><div class="phr-en">The menu, please</div><div class="phr-es">La carta, por favor</div><div class="phr-ph">la KAR-ta, por fa-VOR</div></div>
+
+<div class="phr"><div class="phr-en">Do you have a children's menu?</div><div class="phr-es">¿Tienen menú infantil?</div><div class="phr-ph">TYEH-nen meh-NOO een-fan-TEEL</div></div>
+
+<div class="phr"><div class="phr-en">We are ready to order</div><div class="phr-es">Queremos pedir</div><div class="phr-ph">keh-REH-mos peh-DEER</div></div>
+
+<div class="phr"><div class="phr-en">The bill, please</div><div class="phr-es">La cuenta, por favor</div><div class="phr-ph">la KWEN-ta, por fa-VOR</div></div>
+
+<div class="phr"><div class="phr-en">It's delicious!</div><div class="phr-es">¡Está delicioso!</div><div class="phr-ph">es-TA deh-lee-SYOH-so</div><div class="phr-note">💡 A great compliment for the chef</div></div>
+
+<div class="phr"><div class="phr-en">Where are the toilets?</div><div class="phr-es">¿Dónde están los baños, por favor?</div><div class="phr-ph">DON-deh es-TAN los BAN-yos, por fa-VOR</div></div>
+
+  </div>
+
+  <div class="phrase-cat">🍺 Ordering Drinks — Adults</div>
+  <div class="phrase-grid">
+<div class="phr"><div class="phr-en">A small beer, please</div><div class="phr-es">Una caña, por favor</div><div class="phr-ph">OO-na KAN-ya, por fa-VOR</div><div class="phr-note">💡 Order this for more tapas rounds!</div></div>
+
+<div class="phr"><div class="phr-en">A glass of white wine, please</div><div class="phr-es">Un vaso de vino blanco, por favor</div><div class="phr-ph">oon VA-so deh VEE-no BLAN-ko, por fa-VOR</div></div>
+
+<div class="phr"><div class="phr-en">A gin and tonic, please</div><div class="phr-es">Un gin-tonic, por favor</div><div class="phr-ph">oon JEEN TOH-neek, por fa-VOR</div><div class="phr-note">💡 In Andalusia, try Puerto de Indias strawberry gin — just ask for it by name</div></div>
+
+<div class="phr"><div class="phr-en">A glass of sangria, please</div><div class="phr-es">Una copa de sangría, por favor</div><div class="phr-ph">OO-na KO-pa deh san-GREE-a, por fa-VOR</div></div>
+
+<div class="phr"><div class="phr-en">Two more of the same, please</div><div class="phr-es">Otros dos iguales, por favor</div><div class="phr-ph">OH-tros dos ee-GWA-les, por fa-VOR</div></div>
+
+  </div>
+
+  <div class="phrase-cat">🥤 Ordering Drinks — Kids</div>
+  <div class="phrase-grid">
+<div class="phr"><div class="phr-en">A fresh orange juice, please</div><div class="phr-es">Un zumo de naranja natural, por favor</div><div class="phr-ph">oon SOO-mo deh na-RAN-ha na-too-RAL, por fa-VOR</div><div class="phr-note">💡 Freshly squeezed — spectacular in Andalusia</div></div>
+
+<div class="phr"><div class="phr-en">A lemon slush, please</div><div class="phr-es">Un granizado de limón, por favor</div><div class="phr-ph">oon gra-nee-SA-do deh lee-MON, por fa-VOR</div><div class="phr-note">💡 A traditional Andalusian slushy treat</div></div>
+
+<div class="phr"><div class="phr-en">A grape juice, please</div><div class="phr-es">Un mosto, por favor</div><div class="phr-ph">oon MOS-to, por fa-VOR</div><div class="phr-note">💡 Freshly pressed grape juice — lighter than supermarket juice. Always confirm it's non-alcoholic: ¿Es sin alcohol?</div></div>
+
+<div class="phr"><div class="phr-en">A Coca-Cola, please</div><div class="phr-es">Una Coca-Cola, por favor</div><div class="phr-ph">OO-na KO-ka KO-la, por fa-VOR</div></div>
+
+<div class="phr"><div class="phr-en">Still water, please</div><div class="phr-es">Agua sin gas, por favor</div><div class="phr-ph">A-gwa seen GAS, por fa-VOR</div></div>
+
+<div class="phr"><div class="phr-en">Sparkling water, please</div><div class="phr-es">Agua con gas, por favor</div><div class="phr-ph">A-gwa kon GAS, por fa-VOR</div></div>
+
+  </div>
+
+  <div class="phrase-cat">✅ Allergies &amp; Dietary</div>
+  <div class="phrase-grid">
+<div class="phr"><div class="phr-en">We have no food allergies</div><div class="phr-es">No tenemos alergias alimentarias</div><div class="phr-ph">no teh-NEH-mos ah-LER-hyas ah-lee-men-TAR-yas</div><div class="phr-note">💡 Useful to state proactively at tapas bars</div></div>
+
+<div class="phr"><div class="phr-en">No allergies at all</div><div class="phr-es">Sin ninguna alergia</div><div class="phr-ph">seen neen-GOO-na ah-LER-hya</div><div class="phr-note">💡 Shorter version — works well at busy bars</div></div>
+
+<div class="phr"><div class="phr-en">No nuts, no shellfish, no fish — it's fine for us</div><div class="phr-es">Sin frutos secos, sin marisco, sin pescado — no hay problema para nosotros</div><div class="phr-ph">seen FROO-tos SEH-kos, seen ma-REES-ko, seen pes-KA-do — no eye pro-BLEH-ma PA-ra no-SO-tros</div><div class="phr-note">💡 Use this if you want to be thorough</div></div>
+
+  </div>
+
+  <div class="phrase-cat">🗺️ Getting Around</div>
+  <div class="phrase-grid">
+<div class="phr"><div class="phr-en">Where is...?</div><div class="phr-es">¿Dónde está...?, por favor</div><div class="phr-ph">DON-deh es-TA, por fa-VOR</div></div>
+
+<div class="phr"><div class="phr-en">How much does it cost?</div><div class="phr-es">¿Cuánto cuesta, por favor?</div><div class="phr-ph">KWAN-to KWES-ta, por fa-VOR</div></div>
+
+<div class="phr"><div class="phr-en">Can you call us an Uber/taxi?</div><div class="phr-es">¿Puede llamarnos un taxi?</div><div class="phr-ph">PWEH-deh ya-MAR-nos oon TAK-see</div></div>
+
+<div class="phr"><div class="phr-en">We are lost</div><div class="phr-es">Estamos perdidos</div><div class="phr-ph">es-TA-mos per-DEE-dos</div></div>
+
+<div class="phr"><div class="phr-en">Do you speak English?</div><div class="phr-es">¿Habla inglés?</div><div class="phr-ph">AB-la een-GLES</div></div>
+
+<div class="phr"><div class="phr-en">Thank you very much</div><div class="phr-es">Muchas gracias</div><div class="phr-ph">MOO-chas GRA-syas</div></div>
+
+<div class="phr"><div class="phr-en">You're welcome / No problem</div><div class="phr-es">De nada</div><div class="phr-ph">deh NA-da</div></div>
+
+  </div>
+</section>
+
+<section class="section" id="sec-packing">
+  <div class="sec-header">
+    <div class="sec-title">Packing Checklist</div><div class="sec-bar"></div>
+    <div class="sec-sub">Tick things off as you pack — progress saves automatically</div>
+  </div>
+  <div class="pack-progress">
+    <div class="pack-bar-wrap"><div class="pack-bar" id="pack-bar" style="width:0%"></div></div>
+    <div class="pack-pct" id="pack-pct">0%</div>
+    <button class="pack-reset" onclick="packReset()">Reset all</button>
+  </div>
+  <div class="pack-tabs">
+    <button class="pack-tab active" onclick="showPack('docs',this)">📋 Documents</button>
+    <button class="pack-tab" onclick="showPack('general',this)">🎒 General</button>
+    <button class="pack-tab" onclick="showPack('clare',this)">👒 Clare</button>
+    <button class="pack-tab" onclick="showPack('ellie',this)">🌸 Ellie</button>
+    <button class="pack-tab" onclick="showPack('jacob',this)">⚽ Jacob</button>
+    <button class="pack-tab" onclick="showPack('rob',this)">🧢 Rob</button>
+    <button class="pack-tab" onclick="showPack('todo',this)">🏠 Before We Leave</button>
+  </div>
+
+  <div class="pack-cat active" id="pack-docs"><div class="pack-list">
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_doc_passports"><div class="pack-cb"></div><div class="pack-label">Passports — all 4<small>Required for Alhambra, all trains & flights</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_doc_alh"><div class="pack-cb"></div><div class="pack-label">Alhambra tickets<small>Ref: 2020400LXLYO · 10 Apr · Fri 17:30</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_doc_ryanair"><div class="pack-cb"></div><div class="pack-label">Ryanair boarding passes<small>FR6649 out + FR6648 return</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_doc_insurance"><div class="pack-cb"></div><div class="pack-label">Travel insurance documents<small>Include emergency number</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_doc_bbhotel"><div class="pack-cb"></div><div class="pack-label">B&B Hotel Málaga<small>Ref: 6136809407 · €297 payable on arrival</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_doc_airbnb"><div class="pack-cb"></div><div class="pack-label">Airbnb Córdoba<small>Ref: HMWK8SE58F · Check app Fri 3 Apr for code</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_doc_bibo"><div class="pack-cb"></div><div class="pack-label">Bibo Suites Granada<small>Ref: 27251400 · Online check-in required before arrival</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_doc_mezq"><div class="pack-cb"></div><div class="pack-label">Mezquita tickets<small>Ref: 95794322 · Mon 6 Apr 10:00</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_doc_flamenc"><div class="pack-cb"></div><div class="pack-label">Flamenco tickets<small>Ref: 95798502 · Wed 8 Apr 18:00</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_doc_trains"><div class="pack-cb"></div><div class="pack-label">Renfe train tickets x3<small>02153, 08335, 08915</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_doc_ehic"><div class="pack-cb"></div><div class="pack-label">EHIC / Global Health Insurance Card</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_doc_halifax"><div class="pack-cb"></div><div class="pack-label">Halifax Clarity credit card<small>Best card for foreign spend — no fees</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_doc_cash"><div class="pack-cb"></div><div class="pack-label">Euros cash<small>Smaller tapas bars may be cash only</small></div></div>
+  </div></div>
+
+  <div class="pack-cat" id="pack-general"><div class="pack-list">
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_passports"><div class="pack-cb"></div><div class="pack-label">Passports<small>Double-check all 4 are in the bag</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_calpol"><div class="pack-cb"></div><div class="pack-label">Calpol and syringe</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_speaker"><div class="pack-cb"></div><div class="pack-label">Mini speaker</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_earphones"><div class="pack-cb"></div><div class="pack-label">Earphones</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_shampoo"><div class="pack-cb"></div><div class="pack-label">Shampoo</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_hairbrush"><div class="pack-cb"></div><div class="pack-label">Ellie's hairbrush and hairclips</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_wipes"><div class="pack-cb"></div><div class="pack-label">Toilet wipes</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_dobble"><div class="pack-cb"></div><div class="pack-label">Dobble</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_toothbrush"><div class="pack-cb"></div><div class="pack-label">Toothbrushes</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_toothpaste"><div class="pack-cb"></div><div class="pack-label">Toothpastes</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_owl"><div class="pack-cb"></div><div class="pack-label">Owl clock</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_sunnies"><div class="pack-cb"></div><div class="pack-label">Sunglasses</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_nails"><div class="pack-cb"></div><div class="pack-label">Nail clippers</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_kidssunnies"><div class="pack-cb"></div><div class="pack-label">Kids' sunglasses</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_pengo"><div class="pack-cb"></div><div class="pack-label">Pengo</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_yoto"><div class="pack-cb"></div><div class="pack-label">Yoto, cards and charging cable</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_paper"><div class="pack-cb"></div><div class="pack-label">Paper and pens</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_suncream"><div class="pack-cb"></div><div class="pack-label">Sun cream</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_switch"><div class="pack-cb"></div><div class="pack-label">Switch</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_firestick"><div class="pack-cb"></div><div class="pack-label">Firestick</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_gen_waterbottles"><div class="pack-cb"></div><div class="pack-label">Kids' water bottles</div></div>
+  </div></div>
+
+  <div class="pack-cat" id="pack-clare"><div class="pack-list">
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_pacamac"><div class="pack-cb"></div><div class="pack-label">Pacamac</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_sunhat"><div class="pack-cb"></div><div class="pack-label">Sun hat</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_glasses"><div class="pack-cb"></div><div class="pack-label">Reading glasses</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_books"><div class="pack-cb"></div><div class="pack-label">Books</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_crocs"><div class="pack-cb"></div><div class="pack-label">Croc flip flops</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_lipbalm"><div class="pack-cb"></div><div class="pack-label">Lip balm</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_eyemask"><div class="pack-cb"></div><div class="pack-label">Eye mask / earplugs</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_charger"><div class="pack-cb"></div><div class="pack-label">Phone charger</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_adapters"><div class="pack-cb"></div><div class="pack-label">Power adapters</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_toiletries"><div class="pack-cb"></div><div class="pack-label">Toiletries</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_birks"><div class="pack-cb"></div><div class="pack-label">Birkenstocks</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_clock"><div class="pack-cb"></div><div class="pack-label">Travel clock</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_whitebra"><div class="pack-cb"></div><div class="pack-label">White bra</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_bras"><div class="pack-cb"></div><div class="pack-label">Bras</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_knickers"><div class="pack-cb"></div><div class="pack-label">Knickers</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_tshirts"><div class="pack-cb"></div><div class="pack-label">T-shirts</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_vests"><div class="pack-cb"></div><div class="pack-label">Vest tops</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_sarong"><div class="pack-cb"></div><div class="pack-label">Sarong</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_skirt"><div class="pack-cb"></div><div class="pack-label">Hush skirt</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_dress"><div class="pack-cb"></div><div class="pack-label">Blue linen dress</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_shorts"><div class="pack-cb"></div><div class="pack-label">Blue shorts</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_cl_yoga"><div class="pack-cb"></div><div class="pack-label">Yoga top and shorts, sports bra</div></div>
+  </div></div>
+
+  <div class="pack-cat" id="pack-ellie"><div class="pack-list">
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_el_trainers"><div class="pack-cb"></div><div class="pack-label">Trainers</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_el_brush"><div class="pack-cb"></div><div class="pack-label">Brush for reflexes</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_el_sunnies"><div class="pack-cb"></div><div class="pack-label">Sunglasses</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_el_crocs"><div class="pack-cb"></div><div class="pack-label">Crocs</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_el_sunhat"><div class="pack-cb"></div><div class="pack-label">Sun hat</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_el_sandals"><div class="pack-cb"></div><div class="pack-label">Pink sandals</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_el_dresses"><div class="pack-cb"></div><div class="pack-label">Dresses x4</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_el_shorts"><div class="pack-cb"></div><div class="pack-label">Shorts x3</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_el_tshirts"><div class="pack-cb"></div><div class="pack-label">T-shirts x6</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_el_skirts"><div class="pack-cb"></div><div class="pack-label">Skirts x2</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_el_knickers"><div class="pack-cb"></div><div class="pack-label">Knickers x10</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_el_socks"><div class="pack-cb"></div><div class="pack-label">Socks x3</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_el_pjs"><div class="pack-cb"></div><div class="pack-label">Pyjamas</div></div>
+  </div></div>
+
+  <div class="pack-cat" id="pack-jacob"><div class="pack-list">
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_jac_trainers"><div class="pack-cb"></div><div class="pack-label">Trainers</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_jac_sunhat"><div class="pack-cb"></div><div class="pack-label">Sun hat</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_jac_sunnies"><div class="pack-cb"></div><div class="pack-label">Sunglasses</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_jac_crocs"><div class="pack-cb"></div><div class="pack-label">Crocs</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_jac_shorts"><div class="pack-cb"></div><div class="pack-label">Shorts x5</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_jac_pants"><div class="pack-cb"></div><div class="pack-label">Pants</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_jac_socks"><div class="pack-cb"></div><div class="pack-label">Socks x4</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_jac_tshirts"><div class="pack-cb"></div><div class="pack-label">T-shirts x7</div></div>
+  </div></div>
+
+  <div class="pack-cat" id="pack-rob"><div class="pack-list">
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_coat"><div class="pack-cb"></div><div class="pack-label">Light coat</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_boxers"><div class="pack-cb"></div><div class="pack-label">Boxers x5</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_tshirts"><div class="pack-cb"></div><div class="pack-label">T-shirts / Polos x5</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_pills"><div class="pack-cb"></div><div class="pack-label">Pills</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_shorts"><div class="pack-cb"></div><div class="pack-label">Shorts x2</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_shortsocks"><div class="pack-cb"></div><div class="pack-label">Short socks x5</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_longsocks"><div class="pack-cb"></div><div class="pack-label">Long socks x5</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_jumper"><div class="pack-cb"></div><div class="pack-label">Jumper x1</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_trainers"><div class="pack-cb"></div><div class="pack-label">Trainers x1</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_slippers"><div class="pack-cb"></div><div class="pack-label">Slippers</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_sandals"><div class="pack-cb"></div><div class="pack-label">Sandals x1</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_hat"><div class="pack-cb"></div><div class="pack-label">Hat x1</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_insulin"><div class="pack-cb"></div><div class="pack-label">Insulin</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_cgm"><div class="pack-cb"></div><div class="pack-label">CGM stuff</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_pump"><div class="pack-cb"></div><div class="pack-label">Pump stuff</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_sparepump"><div class="pack-cb"></div><div class="pack-label">Spare pump & consumables</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_asthma"><div class="pack-cb"></div><div class="pack-label">Asthma stuff<small>Blues inhaler etc</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_washbag"><div class="pack-cb"></div><div class="pack-label">Wash bag</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_tweezers"><div class="pack-cb"></div><div class="pack-label">Tweezers & nail scissors</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_soap"><div class="pack-cb"></div><div class="pack-label">Soap</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_razor"><div class="pack-cb"></div><div class="pack-label">Razor</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_clippers"><div class="pack-cb"></div><div class="pack-label">Clippers</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_painkillers"><div class="pack-cb"></div><div class="pack-label">Painkillers</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_contacts"><div class="pack-cb"></div><div class="pack-label">Contact lens stuff</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_sunnies"><div class="pack-cb"></div><div class="pack-label">Sunglasses</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_charger"><div class="pack-cb"></div><div class="pack-label">Phone & watch charger</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_glasses"><div class="pack-cb"></div><div class="pack-label">Glasses</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_powerbank"><div class="pack-cb"></div><div class="pack-label">Power bank & cable</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_usbbank"><div class="pack-cb"></div><div class="pack-label">USB bank</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_jellybabies"><div class="pack-cb"></div><div class="pack-label">Jelly babies<small>For hypos</small></div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_rob_applejuice"><div class="pack-cb"></div><div class="pack-label">Apple juice<small>For hypos</small></div></div>
+  </div></div>
+
+  <div class="pack-cat" id="pack-todo"><div class="pack-list">
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_todo_windows"><div class="pack-cb"></div><div class="pack-label">Lock all windows</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_todo_boiler"><div class="pack-cb"></div><div class="pack-label">Boiler on holiday mode</div></div>
+<div class="pack-item" onclick="packToggle(this)" data-key="pack_todo_kettle"><div class="pack-cb"></div><div class="pack-label">Turn off Qettle</div></div>
+  </div></div>
+</section>
+
+
+</section>
+
+<section class="section" id="sec-alhambra">
+  <div class="sec-header">
+    <div class="sec-title">⭐ Alhambra Briefing</div><div class="sec-bar"></div>
+    <div class="sec-sub">Everything you need to know for the biggest day of the trip</div>
+  </div>
+
+  <div class="alh-hero">
+    <h3>Friday 10 April — The Alhambra</h3>
+    <p>The most visited monument in Spain. A 13th-century Nasrid palace complex, fortress and gardens sitting at 740m above Granada with views of the Sierra Nevada. Allow the full afternoon. Nasrid Palaces timed entry is <strong style="color:#FFB366">17:30 — do not be late</strong>.<br>Order: 2020400LXLYO &nbsp;·&nbsp; Ref: H0LXLYO/1 &nbsp;·&nbsp; 🛂 Passports required for all 4 of you</p>
+  </div>
+
+  <div class="subhead">Visit Sequence</div>
+  <div class="alh-seq">
+    <div class="alh-row">
+      <div class="alh-time">~13:00</div>
+      <div class="alh-detail">
+        <strong>Arrive — Main Entrance (Puerta de la Justicia)</strong>
+        <p>Walk up from Plaza Nueva (~25 min, steep) or take the Alhambra minibus. Show tickets + passports at entrance. Collect a site map.</p>
+        <div class="alh-kids">👧 Tell the kids: "We're going into a real Moorish palace — like something from Aladdin"</div>
+      </div>
+    </div>
+    <div class="alh-row">
+      <div class="alh-time">13:30–15:30</div>
+      <div class="alh-detail">
+        <strong>Alcazaba — The Military Fortress</strong>
+        <p>The oldest part of the Alhambra — towers, battlements and panoramic views over Granada and the Sierra Nevada. Climb the Torre de la Vela for the best view on the site.</p>
+        <div class="alh-kids">👧 Kids love: Climbing the towers, spotting the city below, walking the battlements "like guards"</div>
+      </div>
+    </div>
+    <div class="alh-row">
+      <div class="alh-time">15:30–16:30</div>
+      <div class="alh-detail">
+        <strong>Partal Palace &amp; Promenade of Towers</strong>
+        <p>A quieter, more relaxed section — a beautiful porticoed palace reflected in a long pool, with terraced gardens and walkways along the outer walls. Good for younger children to wander freely.</p>
+      </div>
+    </div>
+    <div class="alh-row hl">
+      <div class="alh-time">16:30–17:15</div>
+      <div class="alh-detail">
+        <strong>☕ Break at on-site café — important rest before Nasrid</strong>
+        <p>The Parador café is the best option. Sit down, have a drink and a snack, let everyone recharge. The Nasrid Palaces require focus and energy — arriving tired is a waste.</p>
+        <div class="alh-kids">👧 Good moment to brief the kids on what they're about to see inside the palaces</div>
+      </div>
+    </div>
+    <div class="alh-row hl">
+      <div class="alh-time">17:30 SHARP</div>
+      <div class="alh-detail">
+        <strong>⭐ Nasrid Palaces — TIMED ENTRY</strong>
+        <p>Present tickets and passports. Entry strictly at your allocated time slot — latecomers are turned away with no refund. The Palaces take 60–90 minutes at a comfortable pace.</p>
+        <div class="alh-kids">👧 Tell the kids to look for: The honeycomb ceilings (muqarnas), the Court of Lions fountain, tiles so detailed they look like lace, and Arabic writing carved into every wall</div>
+      </div>
+    </div>
+    <div class="alh-row">
+      <div class="alh-time">~19:00</div>
+      <div class="alh-detail">
+        <strong>Generalife Gardens (if energy allows)</strong>
+        <p>The royal summer gardens — fountains, cypress trees and terraced flowerbeds. Lovely in the early evening light. Not compulsory if the children are flagging — the palaces are the priority.</p>
+      </div>
+    </div>
+    <div class="alh-row">
+      <div class="alh-time">~20:30</div>
+      <div class="alh-detail">
+        <strong>🥂 Farewell Dinner — Bodegas Castañeda</strong>
+        <p>C. Almireceros 1-3, Granada. No booking needed. Walk in, find a spot at the bar or a table. Free tapa with every drink. The perfect way to end the holiday's biggest day.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="subhead">What to Look For — Nasrid Palaces</div>
+  <div class="alh-cards">
+    <div class="alh-card">
+      <div class="alh-card-icon">🦁</div>
+      <div class="alh-card-title">Court of the Lions</div>
+      <div class="alh-card-text">The most famous courtyard in the Alhambra — a central fountain held up by 12 marble lions, each representing a different hour of the day. The surrounding arcade is carved into intricate geometric patterns. One of the great wonders of medieval architecture.</div>
+    </div>
+    <div class="alh-card">
+      <div class="alh-card-icon">🍯</div>
+      <div class="alh-card-title">Muqarnas Ceilings</div>
+      <div class="alh-card-text">The extraordinary honeycomb-like stalactite ceilings. The Hall of the Two Sisters has over 5,000 individual plaster cells. Ask the children to count how many "hexagons" they can see — they'll lose count immediately.</div>
+    </div>
+    <div class="alh-card">
+      <div class="alh-card-icon">🌊</div>
+      <div class="alh-card-title">Patio de los Arrayanes</div>
+      <div class="alh-card-text">The Court of the Myrtles — a long rectangular reflecting pool flanked by myrtle hedges and a perfectly symmetrical arcade. The reflection of the Torre de Comares in the still water is one of the most photographed images in Spain.</div>
+    </div>
+    <div class="alh-card">
+      <div class="alh-card-icon">✍️</div>
+      <div class="alh-card-title">Arabic Calligraphy</div>
+      <div class="alh-card-text">Every wall, arch and column is covered in Arabic text. Most of it repeats the phrase "There is no conqueror but God" — the motto of the Nasrid dynasty. See how many times the children can spot it (though they'll need to recognise the Arabic script first!).</div>
+    </div>
+    <div class="alh-card">
+      <div class="alh-card-icon">🎨</div>
+      <div class="alh-card-title">Azulejo Tilework</div>
+      <div class="alh-card-text">The lower walls throughout the palaces are lined with interlocking geometric tiles in deep blue, green, white and ochre. No two panels are quite the same. The precision of 14th-century craftsmen without modern tools is extraordinary.</div>
+    </div>
+    <div class="alh-card">
+      <div class="alh-card-icon">👑</div>
+      <div class="alh-card-title">Hall of the Ambassadors</div>
+      <div class="alh-card-text">The largest room in the Alhambra — the throne room of the Nasrid kings, where Columbus presented his plan to sail west to Queen Isabella. The ceiling represents the seven heavens of Islamic cosmology. Look up — it's spectacular.</div>
+    </div>
+  </div>
+
+  <div class="subhead">Essential Tips for the Day</div>
+  <div class="tips-grid">
+    <div class="tcard"><div class="tcard-icon">🛂</div><div class="tcard-title">Passports</div><div class="tcard-text">Every person needs their passport at the entrance gate. No exceptions, even for children. Have all four ready before you join the queue.</div></div>
+    <div class="tcard"><div class="tcard-icon">⏰</div><div class="tcard-title">Nasrid timing is absolute</div><div class="tcard-text">Your 17:30 slot is non-negotiable. Arrive at the Nasrid entrance 5 minutes early. Latecomers are turned away with no refund — the one non-negotiable rule of the day.</div></div>
+    <div class="tcard"><div class="tcard-icon">🎒</div><div class="tcard-title">What to bring</div><div class="tcard-text">Water bottles, snacks, suncream and a layer (740m altitude — noticeably cooler). Comfortable shoes — it's all cobbles and slopes. No large bags allowed into the Nasrid Palaces.</div></div>
+    <div class="tcard"><div class="tcard-icon">📸</div><div class="tcard-title">Photography</div><div class="tcard-text">Allowed throughout including the Nasrid Palaces. No flash, no tripods. The best light for the Court of Lions is late afternoon — perfect for your 17:30 entry. Don't miss the reflection shots in the Patio de los Arrayanes pool.</div></div>
+    <div class="tcard"><div class="tcard-icon">🌡️</div><div class="tcard-title">Temperature</div><div class="tcard-text">The Alhambra sits at 740m — a good 5°C cooler than the city. Bring a light layer even if it feels warm in Granada below. The Nasrid Palaces can feel cool after sunset.</div></div>
+    <div class="tcard"><div class="tcard-icon">🚌</div><div class="tcard-title">Getting there</div><div class="tcard-text">Walk up from Plaza Nueva (~25 min, steep but manageable) or take the Alhambra minibus from Plaza Isabel la Católica. Uber/taxi drops you at the main car park. Bibo Suites is about 30 min walk uphill.</div></div>
+  </div>
+</section>
+
+</main>
+<script>
+var IMGS = {
+  "malaga_seafront": "images/malaga_seafront.jpg",
+  "malaga_cat_ext": "images/malaga_cat_ext.jpg",
+  "malaga_town1": "images/malaga_town1.jpg",
+  "malaga_town2": "images/malaga_town2.jpg",
+  "malaga_cat_int": "images/malaga_cat_int.jpg",
+  "cordoba_ext": "images/cordoba_ext.jpg",
+  "cordoba_int": "images/cordoba_int.jpg",
+  "cordoba_bridge": "images/cordoba_bridge.jpg",
+  "granada_ext": "images/granada_ext.jpg",
+  "granada_pal": "images/granada_pal.jpg",
+  "flamenco": "images/flamenco.jpg",
+  "train_ave": "images/train_ave.jpg",
+  "train_interior": "images/train_interior.jpg",
+  "train_commuter": "images/train_commuter.jpg",
+  "slide_mirador": "images/slide_mirador.jpg",
+  "slide_patio": "images/slide_patio.jpg",
+  "slide_albaic": "images/slide_albaic.jpg",
+  "slide_cordoba_st": "images/slide_cordoba_st.jpg",
+  "slide_granada_st": "images/slide_granada_st.jpg",
+  "slide_airport": "images/slide_airport.jpg",
+  "plane_window": "images/plane_window.jpg",
+  "alcazaba": "images/alcazaba.jpg",
+  "generalife": "images/generalife.jpg",
+  "bib_rambla": "images/bib_rambla.jpg",
+  "bb_hotel": "images/bb_hotel.jpg",
+  "muelle_uno": "images/muelle_uno.jpg",
+  "calleja_closeup": "images/calleja_closeup.jpg",
+  "rio_darro": "images/rio_darro.jpg",
+  "sacromonte": "images/sacromonte.jpg",
+  "capilla_real": "images/capilla_real.jpg",
+  "patio_arrayanes": "images/patio_arrayanes.jpg",
+  "tapas": "images/tapas.jpg"
+};
+var SLIDESHOW = ["malaga_seafront","malaga_cat_ext","malaga_town1","malaga_town2","malaga_cat_int","cordoba_ext","cordoba_int","cordoba_bridge","granada_ext","granada_pal","flamenco","train_ave","train_interior","train_commuter","slide_mirador","slide_patio","slide_albaic","slide_cordoba_st","slide_granada_st","slide_airport","plane_window","alcazaba","generalife","bib_rambla","bb_hotel","muelle_uno","calleja_closeup","rio_darro","sacromonte","capilla_real","patio_arrayanes","tapas"];
+
+function show(id, el) {
+  document.querySelectorAll('.section').forEach(function(s){s.classList.remove('active');});
+  document.querySelectorAll('.nav-tab').forEach(function(t){t.classList.remove('active');});
+  document.getElementById('sec-'+id).classList.add('active');
+  el.classList.add('active');
+}
+function showDay(n, el) {
+  document.querySelectorAll('.day-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.day-btn').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('day-'+n).classList.add('active');
+  el.classList.add('active');
+}
+
+function showPlaceCity(city, el) {
+  document.querySelectorAll('.place-city').forEach(function(c){c.classList.remove('active');});
+  document.querySelectorAll('.place-btn').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('place-'+city).classList.add('active');
+  el.classList.add('active');
+}
+function showCity(city, el) {
+  document.querySelectorAll('.city-food').forEach(function(c){c.classList.remove('active');});
+  document.querySelectorAll('.city-btn').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('food-'+city).classList.add('active');
+  el.classList.add('active');
+}
+(function(){
+  var slides, current=0, INTERVAL=5500;
+  function initImages(){
+    document.querySelectorAll('img.ps-img').forEach(function(img){
+      var k=img.getAttribute('data-key');
+      if(k && IMGS[k]) img.src=IMGS[k];
+    });
+    document.querySelectorAll('.slide[data-key]').forEach(function(s){
+      var k=s.getAttribute('data-key');
+      if(k && IMGS[k]) s.style.backgroundImage='url('+IMGS[k]+')';
+    });
+  }
+  function startSlideshow(){
+    slides=document.querySelectorAll('.slide');
+    if(!slides.length) return;
+    slides[0].classList.add('active');
+    setInterval(function(){
+      slides[current].classList.remove('active');
+      current=(current+1)%slides.length;
+      slides[current].classList.add('active');
+    },INTERVAL);
+  }
+  window.addEventListener('load',function(){
+    initImages();
+    startSlideshow();
+  });
+})();
+
+// ── COUNTDOWN ──────────────────────────────────────────────────────────────
+(function() {
+  var TARGET = new Date('2026-04-04T16:10:00+01:00'); // Luton BST
+  function pad(n) { return String(n).padStart(2,'0'); }
+  function tick() {
+    var now = new Date();
+    var diff = TARGET - now;
+    if (diff <= 0) {
+      var bar = document.getElementById('countdown-bar');
+      if (bar) bar.innerHTML = '<div class="cd-gone">🌞 Have a wonderful holiday!</div>';
+      return;
+    }
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    var el = function(id, v) { var e = document.getElementById(id); if(e) e.textContent = v; };
+    el('cd-days', d);
+    el('cd-hours', pad(h));
+    el('cd-mins', pad(m));
+    el('cd-secs', pad(s));
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+// ── CURRENCY CONVERTER ──────────────────────────────────────────────────────
+var FX_RATE = null;
+
+function fxSet(eur) {
+  var inp = document.getElementById('fx-eur');
+  if (inp) { inp.value = eur; fxConvert('eur'); }
+}
+
+function fxConvert(dir) {
+  if (!FX_RATE) return;
+  if (dir === 'eur') {
+    var e = parseFloat(document.getElementById('fx-eur').value) || 0;
+    document.getElementById('fx-gbp').value = (e / FX_RATE).toFixed(2);
+  } else {
+    var g = parseFloat(document.getElementById('fx-gbp').value) || 0;
+    document.getElementById('fx-eur').value = (g * FX_RATE).toFixed(2);
+  }
+}
+
+(function loadFX() {
+  fetch('https://api.frankfurter.dev/v1/latest?from=GBP&to=EUR')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      FX_RATE = d.rates.EUR;
+      var badge = document.getElementById('fx-badge');
+      var dateEl = document.getElementById('fx-date');
+      if (badge) badge.textContent = '£1 = €' + FX_RATE.toFixed(4);
+      if (dateEl) dateEl.textContent = 'ECB rate as of ' + d.date;
+      // Wire up inputs
+      var gbpEl = document.getElementById('fx-gbp');
+      var eurEl = document.getElementById('fx-eur');
+      if (eurEl) {
+        eurEl.addEventListener('input', function() { fxConvert('eur'); });
+        fxConvert('eur');
+      }
+      if (gbpEl) gbpEl.addEventListener('input', function() { fxConvert('gbp'); });
+    })
+    .catch(function() {
+      var dateEl = document.getElementById('fx-date');
+      if (dateEl) dateEl.textContent = 'Rate unavailable — check signal';
+    });
+})();
+
+// ── WEATHER ─────────────────────────────────────────────────────────────────
+var WX_CODE_ICON = {
+  0:'☀️', 1:'🌤️', 2:'⛅', 3:'☁️',
+  45:'🌫️', 48:'🌫️',
+  51:'🌦️', 53:'🌦️', 55:'🌧️',
+  61:'🌧️', 63:'🌧️', 65:'🌧️',
+  71:'🌨️', 73:'🌨️', 75:'❄️',
+  80:'🌦️', 81:'🌧️', 82:'⛈️',
+  95:'⛈️', 96:'⛈️', 99:'⛈️'
+};
+
+function wxIcon(code) { return WX_CODE_ICON[code] || '🌡️'; }
+
+function renderWx(elId, data, startDate, endDate) {
+  var el = document.getElementById(elId);
+  if (!el) return;
+  var days = data.daily;
+  var html = '';
+  var DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  for (var i = 0; i < days.time.length; i++) {
+    var date = days.time[i];
+    if (date < startDate || date > endDate) continue;
+    var d = new Date(date + 'T12:00:00');
+    var label = DAYS[d.getUTCDay()];
+    var icon = wxIcon(days.weathercode[i]);
+    var hi = Math.round(days.temperature_2m_max[i]);
+    var lo = Math.round(days.temperature_2m_min[i]);
+    var rain = days.precipitation_probability_max[i];
+    html += '<div class="wx-day">' +
+      '<div class="wx-day-label">' + label + '</div>' +
+      '<div class="wx-icon">' + icon + '</div>' +
+      '<div class="wx-temp">' + hi + '°<span>/' + lo + '°</span></div>' +
+      (rain > 20 ? '<div class="wx-rain">💧' + rain + '%</div>' : '') +
+      '</div>';
+  }
+  el.innerHTML = html || '<div class="wx-error">No data for these dates yet — check closer to departure</div>';
+}
+
+(function loadWeather() {
+  var cities = [
+    { id: 'wx-malaga',  lat: 36.72, lon: -4.42, start: '2026-04-04', end: '2026-04-05' },
+    { id: 'wx-cordoba', lat: 37.88, lon: -4.78, start: '2026-04-05', end: '2026-04-07' },
+    { id: 'wx-granada', lat: 37.18, lon: -3.60, start: '2026-04-07', end: '2026-04-11' }
+  ];
+  cities.forEach(function(city) {
+    var url = 'https://api.open-meteo.com/v1/forecast' +
+      '?latitude=' + city.lat + '&longitude=' + city.lon +
+      '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weathercode' +
+      '&timezone=Europe%2FMadrid' +
+      '&start_date=2026-04-04&end_date=2026-04-11';
+    fetch(url)
+      .then(function(r) { return r.json(); })
+      .then(function(d) { renderWx(city.id, d, city.start, city.end); })
+      .catch(function() {
+        var el = document.getElementById(city.id);
+        if (el) el.innerHTML = '<div class="wx-error">Forecast loads closer to departure</div>';
+      });
+  });
+})();
+
+
+// ── PACKING CHECKLIST ────────────────────────────────────────────────────────
+function showPack(cat, el) {
+  document.querySelectorAll('.pack-cat').forEach(function(c){c.classList.remove('active');});
+  document.querySelectorAll('.pack-tab').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('pack-'+cat).classList.add('active');
+  el.classList.add('active');
+}
+function packToggle(el) {
+  el.classList.toggle('checked');
+  var cb = el.querySelector('.pack-cb');
+  if (el.classList.contains('checked')) { cb.textContent = '✓'; }
+  else { cb.textContent = ''; }
+  packSave();
+  packProgress();
+}
+function packSave() {
+  var state = {};
+  document.querySelectorAll('.pack-item').forEach(function(el) {
+    state[el.dataset.key] = el.classList.contains('checked');
+  });
+  try { localStorage.setItem('andalusia_pack', JSON.stringify(state)); } catch(e){}
+}
+function packLoad() {
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem('andalusia_pack') || '{}'); } catch(e){}
+  document.querySelectorAll('.pack-item').forEach(function(el) {
+    if (state[el.dataset.key]) {
+      el.classList.add('checked');
+      el.querySelector('.pack-cb').textContent = '✓';
+    }
+  });
+  packProgress();
+}
+function packProgress() {
+  var all = document.querySelectorAll('.pack-item').length;
+  var done = document.querySelectorAll('.pack-item.checked').length;
+  var pct = all ? Math.round(done/all*100) : 0;
+  var bar = document.getElementById('pack-bar');
+  var pctEl = document.getElementById('pack-pct');
+  if (bar) bar.style.width = pct + '%';
+  if (pctEl) pctEl.textContent = pct + '%';
+}
+function packReset() {
+  document.querySelectorAll('.pack-item').forEach(function(el) {
+    el.classList.remove('checked');
+    el.querySelector('.pack-cb').textContent = '';
+  });
+  try { localStorage.removeItem('andalusia_pack'); } catch(e){}
+  packProgress();
+}
+window.addEventListener('load', function() {
+  packLoad();
+});
+
+</script>
+</body>
+</html>
